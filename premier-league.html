@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League | Ligas em Campo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/liga.css">
+</head>
+<body id="topo" class="liga-premier">
+    <!--
+        LIGAS EM CAMPO - Página da liga: Premier League
+        Trabalho 1 - Web Básico (HTML5 semântico e CSS3)
+    -->
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="marca">
+                <img src="./assets/img/logo-bola.png" alt="Bola de futebol, símbolo do site">
+                Ligas em Campo
+            </a>
+            <nav class="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li>
+                        <a href="./index.html#escalacao" class="ativo">Ligas ▾</a>
+                        <!-- Submenu: aparece ao passar o mouse (CSS :hover) -->
+                        <ul class="submenu">
+                            <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                            <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                            <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                            <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                            <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main>
+        <!-- BANNER: FLEXBOX com o texto e a taça; a cor vem da classe do <body> -->
+        <section class="banner-liga">
+            <div class="container banner-conteudo">
+                <div class="banner-texto">
+                    <nav class="trilha" aria-label="Você está aqui">
+                        <ol>
+                            <li><a href="./index.html">Início</a> ›</li>
+                            <li><a href="./index.html#escalacao">Ligas</a> ›</li>
+                            <li>Premier League</li>
+                        </ol>
+                    </nav>
+                    <h1>Premier League</h1>
+                    <p class="banner-subtitulo">Campeonato Inglês</p>
+                    <p class="banner-resumo">Criada em 1992, é a liga que mais fatura no mundo e herdeira da Football League, a primeira liga de futebol da história, fundada em 1888.</p>
+                    <ul class="chips">
+                        <li>Desde 1992</li>
+                        <li>20 clubes</li>
+                        <li>38 rodadas</li>
+                    </ul>
+                </div>
+                <img src="./assets/img/taca-premier-league.png" alt="Taça dourada com fitas branca e vermelha, as cores da bandeira da Inglaterra" class="banner-taca">
+            </div>
+        </section>
+
+        <!-- SELETOR DE LIGAS: FLEXBOX (a liga atual fica destacada) -->
+        <nav class="trocar-liga" aria-label="Escolher outra liga">
+            <ul>
+                <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                <li><a href="./premier-league.html" class="atual"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO: GRID com grid-template-areas (ver liga.css) -->
+        <div class="container conteudo-liga">
+            <article class="historia">
+                <h2>História</h2>
+                <p>A Inglaterra organizou a primeira liga de futebol do mundo em <strong>1888</strong>: a Football League, com 12 clubes. O Preston North End foi o primeiro campeão e terminou a temporada sem perder nenhum jogo.</p>
+                <p>Em <strong>1992</strong>, os clubes da primeira divisão se separaram da Football League e criaram a Premier League, com o direito de negociar os próprios contratos de TV. O Manchester United de Alex Ferguson venceu a primeira edição e se tornou o maior campeão da nova era, com 13 títulos.</p>
+                <p>Hoje são 20 clubes, os três últimos caem para a Championship, a segunda divisão, e os jogos são transmitidos para quase todos os países do mundo. Na temporada <strong>2025/26</strong>, o Arsenal encerrou uma espera de 22 anos e voltou a ser campeão.</p>
+            </article>
+
+            <aside class="ficha">
+                <h2>Ficha técnica</h2>
+                <img src="./assets/img/bandeira-inglaterra.png" alt="Bandeira da Inglaterra" class="ficha-bandeira">
+                <dl>
+                    <dt>País</dt>
+                    <dd>Inglaterra</dd>
+                    <dt>Organização</dt>
+                    <dd>Premier League</dd>
+                    <dt>Primeira edição</dt>
+                    <dd>1992/93</dd>
+                    <dt>Clubes</dt>
+                    <dd>20</dd>
+                    <dt>Formato</dt>
+                    <dd>Pontos corridos, 38 rodadas</dd>
+                    <dt>Rebaixamento</dt>
+                    <dd>3 clubes</dd>
+                    <dt>Maior campeão</dt>
+                    <dd>Manchester United (13)</dd>
+                    <dt>Campeão 2025/26</dt>
+                    <dd>Arsenal</dd>
+                    <dt>Maior artilheiro</dt>
+                    <dd>Alan Shearer (260 gols)</dd>
+                </dl>
+                <a href="https://www.premierleague.com" class="botao-site" target="_blank">Visitar o site da Premier League</a>
+            </aside>
+
+            <section class="curiosidades">
+                <h2>Você sabia?</h2>
+                <ul class="lista-bola">
+                    <li>Em 2003/04, o Arsenal foi campeão sem perder nenhuma partida: 26 vitórias e 12 empates. O time ficou conhecido como The Invincibles, os Invencíveis.</li>
+                    <li>O Leicester City foi campeão em 2015/16 com uma campanha tão improvável que, antes da temporada, casas de apostas pagavam 5.000 para 1.</li>
+                    <li>O Manchester City fez 100 pontos em 2017/18, recorde da liga, e foi o primeiro a vencer quatro edições seguidas, de 2020/21 a 2023/24.</li>
+                    <li>Em 2022/23, Erling Haaland marcou 36 gols, o maior número em uma temporada de 38 rodadas.</li>
+                </ul>
+            </section>
+
+            <section class="campeoes">
+                <h2>Campeões</h2>
+                <div class="tabelas-campeoes">
+                    <div>
+                        <h3 class="titulo-tabela">Maiores campeões</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pos.</th>
+                                    <th>Clube</th>
+                                    <th class="numero">Títulos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="lider">
+                                    <td><span class="posicao">1</span></td>
+                                    <td>Manchester United</td>
+                                    <td class="numero">13</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">2</span></td>
+                                    <td>Manchester City</td>
+                                    <td class="numero">8</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">3</span></td>
+                                    <td>Chelsea</td>
+                                    <td class="numero">5</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">4</span></td>
+                                    <td>Arsenal</td>
+                                    <td class="numero">4</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">5</span></td>
+                                    <td>Liverpool</td>
+                                    <td class="numero">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="nota">Títulos desde 1992. Somando a antiga primeira divisão, Liverpool e Manchester United têm 20 cada.</p>
+                    </div>
+                    <div>
+                        <h3 class="titulo-tabela">Últimos campeões</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Temporada</th>
+                                    <th>Campeão</th>
+                                    <th>Vice</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025/26</td>
+                                    <td><strong>Arsenal</strong></td>
+                                    <td>Manchester City</td>
+                                </tr>
+                                <tr>
+                                    <td>2024/25</td>
+                                    <td><strong>Liverpool</strong></td>
+                                    <td>Arsenal</td>
+                                </tr>
+                                <tr>
+                                    <td>2023/24</td>
+                                    <td><strong>Manchester City</strong></td>
+                                    <td>Arsenal</td>
+                                </tr>
+                                <tr>
+                                    <td>2022/23</td>
+                                    <td><strong>Manchester City</strong></td>
+                                    <td>Arsenal</td>
+                                </tr>
+                                <tr>
+                                    <td>2021/22</td>
+                                    <td><strong>Manchester City</strong></td>
+                                    <td>Liverpool</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OS 10 PRINCIPAIS JOGADORES: lista numerada (ol) em GRID; cada item em FLEXBOX -->
+            <section class="jogadores">
+                <h2>Os 10 principais jogadores de 2025/26</h2>
+                <p class="jogadores-intro">Os artilheiros da temporada: o ranking é feito pelo número de gols marcados na liga.</p>
+                <ol class="lista-jogadores">
+                    <li class="jogador lider">
+                        <span class="posicao">1</span>
+                        <img src="./assets/img/jogadores/erling-haaland.png" alt="Ilustração de jogador com a camisa do Manchester City">
+                        <p class="jogador-nome">
+                            <strong>Erling Haaland</strong>
+                            <small>Manchester City</small>
+                        </p>
+                        <p class="jogador-gols"><strong>27</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">2</span>
+                        <img src="./assets/img/jogadores/igor-thiago.png" alt="Ilustração de jogador com a camisa do Brentford">
+                        <p class="jogador-nome">
+                            <strong>Igor Thiago</strong>
+                            <small>Brentford</small>
+                        </p>
+                        <p class="jogador-gols"><strong>22</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">3</span>
+                        <img src="./assets/img/jogadores/antoine-semenyo.png" alt="Ilustração de jogador com a camisa do Manchester City">
+                        <p class="jogador-nome">
+                            <strong>Antoine Semenyo</strong>
+                            <small>Bournemouth e Manchester City</small>
+                        </p>
+                        <p class="jogador-gols"><strong>17</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">4</span>
+                        <img src="./assets/img/jogadores/ollie-watkins.png" alt="Ilustração de jogador com a camisa do Aston Villa">
+                        <p class="jogador-nome">
+                            <strong>Ollie Watkins</strong>
+                            <small>Aston Villa</small>
+                        </p>
+                        <p class="jogador-gols"><strong>16</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">5</span>
+                        <img src="./assets/img/jogadores/joao-pedro.png" alt="Ilustração de jogador com a camisa do Chelsea">
+                        <p class="jogador-nome">
+                            <strong>João Pedro</strong>
+                            <small>Chelsea</small>
+                        </p>
+                        <p class="jogador-gols"><strong>15</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">5</span>
+                        <img src="./assets/img/jogadores/morgan-gibbs-white.png" alt="Ilustração de jogador com a camisa do Nottingham Forest">
+                        <p class="jogador-nome">
+                            <strong>Morgan Gibbs-White</strong>
+                            <small>Nottingham Forest</small>
+                        </p>
+                        <p class="jogador-gols"><strong>15</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">7</span>
+                        <img src="./assets/img/jogadores/dominic-calvert-lewin.png" alt="Ilustração de jogador com a camisa do Leeds United">
+                        <p class="jogador-nome">
+                            <strong>Dominic Calvert-Lewin</strong>
+                            <small>Leeds United</small>
+                        </p>
+                        <p class="jogador-gols"><strong>14</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">7</span>
+                        <img src="./assets/img/jogadores/viktor-gyokeres.png" alt="Ilustração de jogador com a camisa do Arsenal">
+                        <p class="jogador-nome">
+                            <strong>Viktor Gyökeres</strong>
+                            <small>Arsenal</small>
+                        </p>
+                        <p class="jogador-gols"><strong>14</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">9</span>
+                        <img src="./assets/img/jogadores/danny-welbeck.png" alt="Ilustração de jogador com a camisa do Brighton">
+                        <p class="jogador-nome">
+                            <strong>Danny Welbeck</strong>
+                            <small>Brighton</small>
+                        </p>
+                        <p class="jogador-gols"><strong>13</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">9</span>
+                        <img src="./assets/img/jogadores/eli-junior-kroupi.png" alt="Ilustração de jogador com a camisa do Bournemouth">
+                        <p class="jogador-nome">
+                            <strong>Eli Junior Kroupi</strong>
+                            <small>Bournemouth</small>
+                        </p>
+                        <p class="jogador-gols"><strong>13</strong> gols</p>
+                    </li>
+                </ol>
+                <p class="nota">Jogadores com o mesmo número de gols dividem a posição. Semenyo marcou 10 gols pelo Bournemouth e 7 pelo Manchester City, para onde se transferiu em janeiro. As imagens são ilustrações com as cores de cada clube, não fotos dos jogadores. Fonte: <a href="https://www.football365.com/news/premier-league-player-stats-2025-26-salah-haaland-isak" target="_blank">Football365</a>.</p>
+            </section>
+
+            <section class="classicos">
+                <h2>Grandes clássicos</h2>
+                <div class="classicos-grade">
+                    <article class="classico">
+                        <h3>North West Derby</h3>
+                        <p class="classico-times">Liverpool x Manchester United</p>
+                        <p>O duelo entre os dois maiores campeões da Inglaterra, com 20 títulos cada.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Clássico de Manchester</h3>
+                        <p class="classico-times">Manchester United x Manchester City</p>
+                        <p>Divide a cidade entre vermelhos e azuis e ganhou força com a ascensão do City neste século.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Clássico do Norte de Londres</h3>
+                        <p class="classico-times">Arsenal x Tottenham</p>
+                        <p>Os dois estádios ficam a poucos quilômetros de distância, no norte da capital inglesa.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Clássico de Merseyside</h3>
+                        <p class="classico-times">Liverpool x Everton</p>
+                        <p>A rivalidade da cidade de Liverpool é disputada na liga desde 1894.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- NAVEGAÇÃO ENTRE LIGAS: FLEXBOX com um link em cada ponta -->
+        <nav class="container paginacao" aria-label="Liga anterior e próxima liga">
+            <a href="./brasileirao.html">
+                <span>Liga anterior</span>
+                <strong>Brasileirão</strong>
+            </a>
+            <a href="./la-liga.html">
+                <span>Próxima liga</span>
+                <strong>La Liga</strong>
+            </a>
+        </nav>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <div class="container rodape-colunas">
+            <section class="rodape-sobre">
+                <h2>Ligas em Campo</h2>
+                <p>Guia das cinco grandes ligas do futebol.</p>
+                <p>Dados atualizados até o fim da temporada europeia 2025/26 e do Brasileirão 2025.</p>
+            </section>
+            <nav class="rodape-links" aria-label="Mapa do site">
+                <h2>Navegue</h2>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+            <nav class="rodape-links" aria-label="Ligas">
+                <h2>Ligas</h2>
+                <ul>
+                    <li><a href="./brasileirao.html">Brasileirão</a></li>
+                    <li><a href="./premier-league.html">Premier League</a></li>
+                    <li><a href="./la-liga.html">La Liga</a></li>
+                    <li><a href="./serie-a.html">Serie A</a></li>
+                    <li><a href="./bundesliga.html">Bundesliga</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container rodape-base">
+            <p>&copy; 2026 Ligas em Campo.</p>
+            <a href="#topo">Voltar ao topo</a>
+        </div>
+    </footer>
+</body>
+</html>

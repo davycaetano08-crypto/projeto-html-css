@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o projeto | Ligas em Campo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/sobre.css">
+</head>
+<body id="topo">
+    <!--
+        LIGAS EM CAMPO - Sobre o projeto e a equipe
+        Trabalho 1 - Web Básico (HTML5 semântico e CSS3)
+    -->
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="marca">
+                <img src="./assets/img/logo-bola.png" alt="Bola de futebol, símbolo do site">
+                Ligas em Campo
+            </a>
+            <nav class="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li>
+                        <a href="./index.html#escalacao">Ligas ▾</a>
+                        <!-- Submenu: aparece ao passar o mouse (CSS :hover) -->
+                        <ul class="submenu">
+                            <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                            <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                            <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                            <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                            <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html" class="ativo">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main>
+        <!-- BANNER com listras de gramado (linear-gradient) -->
+        <section class="banner-pagina">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está aqui">
+                    <ol>
+                        <li><a href="./index.html">Início</a> ›</li>
+                        <li>Sobre o projeto</li>
+                    </ol>
+                </nav>
+                <h1>Sobre o projeto</h1>
+                <p>Quem fez o site, como ele foi construído e de onde vieram as informações.</p>
+            </div>
+        </section>
+
+        <!-- O PROJETO: GRID com texto e imagem -->
+        <section class="secao">
+            <div class="container projeto">
+                <article>
+                    <h2 class="secao-titulo">O projeto</h2>
+                    <p>O Ligas em Campo foi criado para o A2. A proposta era construir um site com HTML5 semântico e CSS3, usando Flexbox e Grid no layout.</p>
+                    <p>Reunimos as cinco ligas mais acompanhadas pelos brasileiros e dividimos o conteúdo em páginas: uma para cada liga, um comparativo entre elas e esta página sobre o projeto.</p>
+                    <p>Os dados vão até o fim da temporada europeia 2025/26, encerrada em maio de 2026, e do Brasileirão 2025, encerrado em dezembro de 2025.</p>
+                </article>
+                <img src="./assets/img/prancheta.png" alt="Prancheta tática com a marcação dos jogadores e setas de movimentação">
+            </div>
+        </section>
+
+        <!-- EQUIPE: FLEXBOX com os integrantes -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Equipe</h2>
+                <p class="secao-intro">Equipe que realizou o trabalho</p>
+                <ul class="equipe">
+                    <li class="integrante">
+                        <img src="./assets/img/camisa-10.png" alt="Camisa verde número 10">
+                        <h3>João Pedro Oliva Fernandes</h3>
+                        <p>RGM:</p>
+                    </li>
+                    <li class="integrante">
+                        <img src="./assets/img/camisa-7.png" alt="Camisa azul número 7">
+                        <h3>Nome do Integrante 2</h3>
+                        <p>RGM: </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TÉCNICAS: tabela mostrando onde cada requisito foi aplicado -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Como o site foi construído</h2>
+                <p class="secao-intro">Onde cada técnica pedida no trabalho foi aplicada. O site usa somente HTML5 e CSS3.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Técnica</th>
+                            <th>Onde foi aplicada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tecnica">HTML5 semântico</td>
+                            <td>header, nav, main, section, article, aside, footer, blockquote, listas descritivas (dl, dt, dd), lista numerada (ol) no ranking de jogadores e tabelas com thead, tbody e tfoot.</td>
+                        </tr>
+                        <tr>
+                            <td class="tecnica">Flexbox</td>
+                            <td>Cabeçalho e menu, botões do topo, placar da página inicial, seletor de ligas, cards dos jogadores, links de liga anterior e próxima, cards dos perfis, equipe e rodapé.</td>
+                        </tr>
+                        <tr>
+                            <td class="tecnica">Grid</td>
+                            <td>Escalação das ligas no campo e layout das páginas das ligas (grid-template-areas), ficha técnica, tabelas de campeões lado a lado, lista dos 10 principais jogadores, cards de clássicos (repeat, auto-fit e minmax) e perfis do comparativo (grid-column).</td>
+                        </tr>
+                        <tr>
+                            <td class="tecnica">Tabelas</td>
+                            <td>Campeões da temporada (início), maiores e últimos campeões (ligas), raio-x com colspan e rowspan, recordes e artilheiros com colgroup (comparativo) e esta tabela.</td>
+                        </tr>
+                        <tr>
+                            <td class="tecnica">Imagens</td>
+                            <td>Bandeiras, taças, estádio, campo, camisas, prancheta e as figurinhas dos jogadores, usadas com img, background-image e list-style-image.</td>
+                        </tr>
+                        <tr>
+                            <td class="tecnica">Links</td>
+                            <td>Menu com submenu, trilha de navegação, seletor de ligas, liga anterior e próxima, âncoras internas (#escalacao e #topo) e links externos para as fontes.</td>
+                        </tr>
+                        <tr>
+                            <td class="tecnica">Responsividade</td>
+                            <td>Media queries em 1200px, 900px, 800px e 600px, que reorganizam o grid, o menu, os banners e as tabelas.</td>
+                        </tr>
+                        <tr>
+                            <td class="tecnica">Posicionamento e efeitos</td>
+                            <td>Cabeçalho com position sticky e backdrop-filter, submenu com position absolute, imagem fixa no topo e transform com transition nos cards.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FONTES: links externos abrem em nova aba (target="_blank") -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Fontes consultadas</h2>
+                <ul class="fontes">
+                    <li><a href="https://www.cbf.com.br" target="_blank">CBF: site oficial do Campeonato Brasileiro</a></li>
+                    <li><a href="https://www.cbf.com.br/futebol-brasileiro/noticias/copa-do-brasil/profissional/flamengo-e-campeao-do-brasileirao-betano-2025" target="_blank">CBF: Flamengo é campeão do Brasileirão 2025</a></li>
+                    <li><a href="https://www.premierleague.com" target="_blank">Premier League: site oficial</a></li>
+                    <li><a href="https://www.premierleague.com/en/news/4662306/arsenal-win-2025-26-premier-league-title-ending-22-year-wait-to-be-crowned-champions-again" target="_blank">Premier League: Arsenal campeão da temporada 2025/26</a></li>
+                    <li><a href="https://www.laliga.com" target="_blank">LALIGA: site oficial</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/2025%E2%80%9326_La_Liga" target="_blank">Wikipédia: temporada 2025/26 de La Liga</a></li>
+                    <li><a href="https://www.legaseriea.it" target="_blank">Lega Serie A: site oficial</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_Italian_football_champions" target="_blank">Wikipédia: lista de campeões italianos</a></li>
+                    <li><a href="https://www.bundesliga.com" target="_blank">Bundesliga: site oficial</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/2025%E2%80%9326_Bundesliga" target="_blank">Wikipédia: temporada 2025/26 da Bundesliga</a></li>
+                    <li><a href="https://www.goal.com/br/listas/campeonato-brasileiro-artilheiros-garcons-competicao-2025/blt5b7307ba7f495b5b" target="_blank">Goal Brasil: artilheiros do Brasileirão 2025</a></li>
+                    <li><a href="https://pt.besoccer.com/competicao/rankings/serie_a_brazil/2025/artilheiros-penaltis" target="_blank">BeSoccer: gols de pênalti do Brasileirão 2025</a></li>
+                    <li><a href="https://www.football365.com/news/premier-league-player-stats-2025-26-salah-haaland-isak" target="_blank">Football365: artilheiros da Premier League 2025/26</a></li>
+                    <li><a href="https://sports.yahoo.com/articles/la-liga-top-goal-scorers-212600100.html" target="_blank">The Sporting News: artilheiros de La Liga 2025/26</a></li>
+                    <li><a href="https://sport.sky.it/calcio/serie-a/classifica-marcatori-serie-a-2025-2026" target="_blank">Sky Sport Itália: artilheiros da Serie A 2025/26</a></li>
+                    <li><a href="https://sport.sky.it/calcio/serie-a/rigori-serie-a-2025-2026" target="_blank">Sky Sport Itália: pênaltis da Serie A 2025/26</a></li>
+                    <li><a href="https://datencenter.dfb.de/competitions/bundesliga/seasons/2025-2026/top_scorer" target="_blank">DFB: artilheiros da Bundesliga 2025/26</a></li>
+                </ul>
+                <p class="nota">Imagens: ilustrações originais feitas para este site. As figurinhas dos jogadores são desenhos genéricos com as cores dos clubes, não fotos. As bandeiras foram baseadas no projeto flag-icons, de licença livre (MIT).</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <div class="container rodape-colunas">
+            <section class="rodape-sobre">
+                <h2>Ligas em Campo</h2>
+                <p>Guia das cinco grandes ligas do futebol.</p>
+                <p>Dados atualizados até o fim da temporada europeia 2025/26 e do Brasileirão 2025.</p>
+            </section>
+            <nav class="rodape-links" aria-label="Mapa do site">
+                <h2>Navegue</h2>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+            <nav class="rodape-links" aria-label="Ligas">
+                <h2>Ligas</h2>
+                <ul>
+                    <li><a href="./brasileirao.html">Brasileirão</a></li>
+                    <li><a href="./premier-league.html">Premier League</a></li>
+                    <li><a href="./la-liga.html">La Liga</a></li>
+                    <li><a href="./serie-a.html">Serie A</a></li>
+                    <li><a href="./bundesliga.html">Bundesliga</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container rodape-base">
+            <p>&copy; 2026 Ligas em Campo.</p>
+            <a href="#topo">Voltar ao topo</a>
+        </div>
+    </footer>
+</body>
+</html>

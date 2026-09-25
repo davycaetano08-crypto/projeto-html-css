@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie A | Ligas em Campo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/liga.css">
+</head>
+<body id="topo" class="liga-seriea">
+    <!--
+        LIGAS EM CAMPO - Página da liga: Serie A
+        Trabalho 1 - Web Básico (HTML5 semântico e CSS3)
+    -->
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="marca">
+                <img src="./assets/img/logo-bola.png" alt="Bola de futebol, símbolo do site">
+                Ligas em Campo
+            </a>
+            <nav class="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li>
+                        <a href="./index.html#escalacao" class="ativo">Ligas ▾</a>
+                        <!-- Submenu: aparece ao passar o mouse (CSS :hover) -->
+                        <ul class="submenu">
+                            <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                            <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                            <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                            <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                            <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main>
+        <!-- BANNER: FLEXBOX com o texto e a taça; a cor vem da classe do <body> -->
+        <section class="banner-liga">
+            <div class="container banner-conteudo">
+                <div class="banner-texto">
+                    <nav class="trilha" aria-label="Você está aqui">
+                        <ol>
+                            <li><a href="./index.html">Início</a> ›</li>
+                            <li><a href="./index.html#escalacao">Ligas</a> ›</li>
+                            <li>Serie A</li>
+                        </ol>
+                    </nav>
+                    <h1>Serie A</h1>
+                    <p class="banner-subtitulo">Campeonato Italiano</p>
+                    <p class="banner-resumo">Disputado desde 1898, o Campeonato Italiano ficou famoso pela força tática e defensiva e pelos grandes craques que passaram pelo país.</p>
+                    <ul class="chips">
+                        <li>Desde 1898</li>
+                        <li>20 clubes</li>
+                        <li>38 rodadas</li>
+                    </ul>
+                </div>
+                <img src="./assets/img/taca-serie-a.png" alt="Taça dourada com fitas verde, branca e vermelha, as cores da bandeira da Itália" class="banner-taca">
+            </div>
+        </section>
+
+        <!-- SELETOR DE LIGAS: FLEXBOX (a liga atual fica destacada) -->
+        <nav class="trocar-liga" aria-label="Escolher outra liga">
+            <ul>
+                <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                <li><a href="./serie-a.html" class="atual"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO: GRID com grid-template-areas (ver liga.css) -->
+        <div class="container conteudo-liga">
+            <article class="historia">
+                <h2>História</h2>
+                <p>O primeiro Campeonato Italiano foi disputado em <strong>1898</strong>, em um único dia, na cidade de Turim, com apenas quatro clubes. O Genoa foi o campeão.</p>
+                <p>Até o fim dos anos 1920 o torneio era dividido em grupos regionais. A partir da temporada <strong>1929/30</strong>, passou a ser disputado em grupo único, com o nome de Serie A. Nos anos 1960, a Inter do técnico Helenio Herrera popularizou o catenaccio, sistema defensivo que virou marca do futebol italiano.</p>
+                <p>Juventus, Inter e Milan concentram a maior parte das conquistas, mas clubes como Napoli, Roma, Lazio e até o pequeno Cagliari também já foram campeões. Em <strong>2025/26</strong>, a Inter conquistou o 21º título com três rodadas de antecedência.</p>
+            </article>
+
+            <aside class="ficha">
+                <h2>Ficha técnica</h2>
+                <img src="./assets/img/bandeira-italia.png" alt="Bandeira da Itália" class="ficha-bandeira">
+                <dl>
+                    <dt>País</dt>
+                    <dd>Itália</dd>
+                    <dt>Organização</dt>
+                    <dd>Lega Serie A</dd>
+                    <dt>Primeira edição</dt>
+                    <dd>1898</dd>
+                    <dt>Clubes</dt>
+                    <dd>20</dd>
+                    <dt>Formato</dt>
+                    <dd>Pontos corridos, 38 rodadas</dd>
+                    <dt>Rebaixamento</dt>
+                    <dd>3 clubes</dd>
+                    <dt>Maior campeão</dt>
+                    <dd>Juventus (36)</dd>
+                    <dt>Campeão 2025/26</dt>
+                    <dd>Inter de Milão</dd>
+                    <dt>Maior artilheiro</dt>
+                    <dd>Silvio Piola (274 gols)</dd>
+                </dl>
+                <a href="https://www.legaseriea.it" class="botao-site" target="_blank">Visitar o site da Lega Serie A</a>
+            </aside>
+
+            <section class="curiosidades">
+                <h2>Você sabia?</h2>
+                <ul class="lista-bola">
+                    <li>A Juventus ganhou nove títulos seguidos, de 2011/12 a 2019/20, recorde do campeonato.</li>
+                    <li>Com 102 pontos, a Juventus de 2013/14 tem a maior pontuação da história da Serie A.</li>
+                    <li>O campeão ganha o direito de usar o scudetto, um escudo com as cores da bandeira italiana, na camisa da temporada seguinte.</li>
+                    <li>A cada dez títulos, o clube pode usar uma estrela acima do escudo: a Juventus tem três, a Inter tem duas e o Milan, uma.</li>
+                    <li>O Napoli de Maradona conquistou os primeiros títulos da sua história em 1987 e 1990.</li>
+                </ul>
+            </section>
+
+            <section class="campeoes">
+                <h2>Campeões</h2>
+                <div class="tabelas-campeoes">
+                    <div>
+                        <h3 class="titulo-tabela">Maiores campeões</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pos.</th>
+                                    <th>Clube</th>
+                                    <th class="numero">Títulos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="lider">
+                                    <td><span class="posicao">1</span></td>
+                                    <td>Juventus</td>
+                                    <td class="numero">36</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">2</span></td>
+                                    <td>Inter de Milão</td>
+                                    <td class="numero">21</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">3</span></td>
+                                    <td>Milan</td>
+                                    <td class="numero">19</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">4</span></td>
+                                    <td>Genoa</td>
+                                    <td class="numero">9</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">5</span></td>
+                                    <td>Bologna, Pro Vercelli e Torino</td>
+                                    <td class="numero">7</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="nota">Contagem desde 1898, incluindo os campeonatos anteriores à criação da Serie A.</p>
+                    </div>
+                    <div>
+                        <h3 class="titulo-tabela">Últimos campeões</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Temporada</th>
+                                    <th>Campeão</th>
+                                    <th>Vice</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025/26</td>
+                                    <td><strong>Inter de Milão</strong></td>
+                                    <td>Napoli</td>
+                                </tr>
+                                <tr>
+                                    <td>2024/25</td>
+                                    <td><strong>Napoli</strong></td>
+                                    <td>Inter de Milão</td>
+                                </tr>
+                                <tr>
+                                    <td>2023/24</td>
+                                    <td><strong>Inter de Milão</strong></td>
+                                    <td>Milan</td>
+                                </tr>
+                                <tr>
+                                    <td>2022/23</td>
+                                    <td><strong>Napoli</strong></td>
+                                    <td>Lazio</td>
+                                </tr>
+                                <tr>
+                                    <td>2021/22</td>
+                                    <td><strong>Milan</strong></td>
+                                    <td>Inter de Milão</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OS 10 PRINCIPAIS JOGADORES: lista numerada (ol) em GRID; cada item em FLEXBOX -->
+            <section class="jogadores">
+                <h2>Os 10 principais jogadores de 2025/26</h2>
+                <p class="jogadores-intro">Os artilheiros da temporada: o ranking é feito pelo número de gols marcados na liga.</p>
+                <ol class="lista-jogadores">
+                    <li class="jogador lider">
+                        <span class="posicao">1</span>
+                        <img src="./assets/img/jogadores/lautaro-martinez.png" alt="Ilustração de jogador com a camisa da Inter de Milão">
+                        <p class="jogador-nome">
+                            <strong>Lautaro Martínez</strong>
+                            <small>Inter de Milão</small>
+                        </p>
+                        <p class="jogador-gols"><strong>17</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">2</span>
+                        <img src="./assets/img/jogadores/donyell-malen.png" alt="Ilustração de jogador com a camisa da Roma">
+                        <p class="jogador-nome">
+                            <strong>Donyell Malen</strong>
+                            <small>Roma</small>
+                        </p>
+                        <p class="jogador-gols"><strong>14</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">2</span>
+                        <img src="./assets/img/jogadores/tasos-douvikas.png" alt="Ilustração de jogador com a camisa do Como">
+                        <p class="jogador-nome">
+                            <strong>Tasos Douvikas</strong>
+                            <small>Como</small>
+                        </p>
+                        <p class="jogador-gols"><strong>14</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">4</span>
+                        <img src="./assets/img/jogadores/marcus-thuram.png" alt="Ilustração de jogador com a camisa da Inter de Milão">
+                        <p class="jogador-nome">
+                            <strong>Marcus Thuram</strong>
+                            <small>Inter de Milão</small>
+                        </p>
+                        <p class="jogador-gols"><strong>13</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">5</span>
+                        <img src="./assets/img/jogadores/nico-paz.png" alt="Ilustração de jogador com a camisa do Como">
+                        <p class="jogador-nome">
+                            <strong>Nico Paz</strong>
+                            <small>Como</small>
+                        </p>
+                        <p class="jogador-gols"><strong>12</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">5</span>
+                        <img src="./assets/img/jogadores/rasmus-hojlund.png" alt="Ilustração de jogador com a camisa do Napoli">
+                        <p class="jogador-nome">
+                            <strong>Rasmus Højlund</strong>
+                            <small>Napoli</small>
+                        </p>
+                        <p class="jogador-gols"><strong>12</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">7</span>
+                        <img src="./assets/img/jogadores/giovanni-simeone.png" alt="Ilustração de jogador com a camisa do Torino">
+                        <p class="jogador-nome">
+                            <strong>Giovanni Simeone</strong>
+                            <small>Torino</small>
+                        </p>
+                        <p class="jogador-gols"><strong>11</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">8</span>
+                        <img src="./assets/img/jogadores/kenan-yildiz.png" alt="Ilustração de jogador com a camisa da Juventus">
+                        <p class="jogador-nome">
+                            <strong>Kenan Yıldız</strong>
+                            <small>Juventus</small>
+                        </p>
+                        <p class="jogador-gols"><strong>10</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">8</span>
+                        <img src="./assets/img/jogadores/nikola-krstovic.png" alt="Ilustração de jogador com a camisa da Atalanta">
+                        <p class="jogador-nome">
+                            <strong>Nikola Krstović</strong>
+                            <small>Atalanta</small>
+                        </p>
+                        <p class="jogador-gols"><strong>10</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">8</span>
+                        <img src="./assets/img/jogadores/scott-mctominay.png" alt="Ilustração de jogador com a camisa do Napoli">
+                        <p class="jogador-nome">
+                            <strong>Scott McTominay</strong>
+                            <small>Napoli</small>
+                        </p>
+                        <p class="jogador-gols"><strong>10</strong> gols</p>
+                    </li>
+                </ol>
+                <p class="nota">Jogadores com o mesmo número de gols dividem a posição. Sete jogadores terminaram com 10 gols; ficaram com as três últimas vagas os que marcaram menos gols de pênalti. Também fizeram 10 gols: Federico Bonazzoli (Cremonese), Gianluca Scamacca (Atalanta), Keinan Davis (Udinese) e Riccardo Orsolini (Bologna). As imagens são ilustrações com as cores de cada clube, não fotos dos jogadores. Fonte: <a href="https://sport.sky.it/calcio/serie-a/classifica-marcatori-serie-a-2025-2026" target="_blank">Sky Sport Itália</a>.</p>
+            </section>
+
+            <section class="classicos">
+                <h2>Grandes clássicos</h2>
+                <div class="classicos-grade">
+                    <article class="classico">
+                        <h3>Derby della Madonnina</h3>
+                        <p class="classico-times">Inter x Milan</p>
+                        <p>Os dois clubes de Milão dividem o mesmo estádio, o San Siro.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Derby d'Italia</h3>
+                        <p class="classico-times">Juventus x Inter</p>
+                        <p>O clássico entre os dois maiores campeões do país.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Derby della Capitale</h3>
+                        <p class="classico-times">Roma x Lazio</p>
+                        <p>Divide a capital italiana, e os rivais também dividem o Estádio Olímpico.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Derby della Mole</h3>
+                        <p class="classico-times">Juventus x Torino</p>
+                        <p>O clássico de Turim, cidade onde foi disputado o primeiro campeonato, em 1898.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- NAVEGAÇÃO ENTRE LIGAS: FLEXBOX com um link em cada ponta -->
+        <nav class="container paginacao" aria-label="Liga anterior e próxima liga">
+            <a href="./la-liga.html">
+                <span>Liga anterior</span>
+                <strong>La Liga</strong>
+            </a>
+            <a href="./bundesliga.html">
+                <span>Próxima liga</span>
+                <strong>Bundesliga</strong>
+            </a>
+        </nav>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <div class="container rodape-colunas">
+            <section class="rodape-sobre">
+                <h2>Ligas em Campo</h2>
+                <p>Guia das cinco grandes ligas do futebol.</p>
+                <p>Dados atualizados até o fim da temporada europeia 2025/26 e do Brasileirão 2025.</p>
+            </section>
+            <nav class="rodape-links" aria-label="Mapa do site">
+                <h2>Navegue</h2>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+            <nav class="rodape-links" aria-label="Ligas">
+                <h2>Ligas</h2>
+                <ul>
+                    <li><a href="./brasileirao.html">Brasileirão</a></li>
+                    <li><a href="./premier-league.html">Premier League</a></li>
+                    <li><a href="./la-liga.html">La Liga</a></li>
+                    <li><a href="./serie-a.html">Serie A</a></li>
+                    <li><a href="./bundesliga.html">Bundesliga</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container rodape-base">
+            <p>&copy; 2026 Ligas em Campo.</p>
+            <a href="#topo">Voltar ao topo</a>
+        </div>
+    </footer>
+</body>
+</html>

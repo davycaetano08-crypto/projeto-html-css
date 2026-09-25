@@ -1,0 +1,94 @@
+/* ==========================================================================
+   LIGAS EM CAMPO - SOBRE O PROJETO (sobre.html)
+   ========================================================================== */
+
+
+/* ---------- O PROJETO ---------- */
+
+/* GRID: texto à esquerda e prancheta tática à direita */
+.projeto {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.projeto p {
+    color: #33404D;
+    font-size: 1.08rem;
+}
+
+.projeto img {
+    width: 100%;
+}
+
+
+/* ---------- EQUIPE ---------- */
+
+/* FLEXBOX: cards dos integrantes, distribuídos com space-evenly */
+.equipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.integrante {
+    flex-basis: 280px;
+    flex-grow: 1;
+    padding: 28px 24px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(18, 33, 59, 0.15);
+}
+
+.integrante img {
+    width: 160px;
+    margin: 0 auto 12px auto;
+}
+
+.integrante h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.6rem;
+}
+
+.integrante p {
+    margin: 0;
+    color: #4A5663;
+}
+
+
+/* ---------- TABELA DE TÉCNICAS ---------- */
+.tecnica {
+    width: 22%;
+    color: #12213B;
+    font-weight: bold;
+}
+
+
+/* ---------- FONTES ---------- */
+.fontes {
+    margin: 0 0 24px 0;
+    padding: 0 0 0 20px;
+}
+
+.fontes li {
+    margin: 0 0 10px 0;
+}
+
+
+/* ---------- RESPONSIVIDADE DA PÁGINA SOBRE ---------- */
+@media (max-width: 900px) {
+    .projeto {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto img {
+        width: 70%;
+        margin: 0 auto;
+    }
+}

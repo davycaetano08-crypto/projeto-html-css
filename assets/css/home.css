@@ -1,0 +1,334 @@
+/* ==========================================================================
+   LIGAS EM CAMPO - PÁGINA INICIAL (index.html)
+   ========================================================================== */
+
+
+/* ---------- TOPO (HERO) COM IMAGEM FIXA ---------- */
+
+/* FLEXBOX: centraliza o conteúdo na vertical.
+   background-attachment: fixed deixa o estádio parado durante a rolagem */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 86vh;
+    background-image: url("../img/estadio.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #FFFFFF;
+}
+
+.hero-conteudo {
+    width: 620px;
+    padding: 64px 0;
+}
+
+.hero h1 {
+    margin: 0 0 20px 0;
+    color: #FFFFFF;
+    font-size: 6.5rem;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    color: #E4EAF2;
+    font-size: 1.3rem;
+}
+
+/* FLEXBOX: botões lado a lado, quebrando linha se faltar espaço */
+.hero-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 32px 0 0 0;
+}
+
+
+/* ---------- ESCALAÇÃO: AS LIGAS POSICIONADAS NO CAMPO ---------- */
+
+/* GRID com grid-template-areas: cada liga ocupa uma posição,
+   formando um 2-1-2 com o Brasileirão no círculo central */
+.campo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "premier . laliga"
+        ". brasileirao ."
+        "seriea . bundesliga";
+    gap: 20px 40px;
+    margin: 0;
+    padding: 56px 56px 40px 56px;
+    list-style: none;
+    background-image: url("../img/campo.jpg");
+    background-size: 100% 100%;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(18, 33, 59, 0.25);
+}
+
+.area-brasileirao {
+    grid-area: brasileirao;
+}
+
+.area-premier {
+    grid-area: premier;
+}
+
+.area-laliga {
+    grid-area: laliga;
+}
+
+.area-seriea {
+    grid-area: seriea;
+}
+
+.area-bundesliga {
+    grid-area: bundesliga;
+}
+
+/* Cada liga é uma "ficha de jogador": FLEXBOX em coluna */
+.card-liga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    margin: 44px auto 0 auto;
+    padding: 0 16px 18px 16px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 14px;
+    color: #12213B;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease-in-out;
+}
+
+.card-liga:hover {
+    color: #12213B;
+    transform: translate(0, -6px);
+}
+
+/* Metade do escudo fica para fora do card (margem negativa) */
+.card-liga img {
+    width: 88px;
+    margin: -44px 0 10px 0;
+    border-radius: 50%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-liga h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.6rem;
+}
+
+.card-liga p {
+    margin: 0;
+    color: #4A5663;
+    font-weight: normal;
+}
+
+.card-liga .card-liga-dados {
+    margin: 10px 0 0 0;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: #EEF3EC;
+    color: #155C33;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* O Brasileirão, no centro do campo, usa a braçadeira de capitão */
+.area-brasileirao .card-liga {
+    border: 4px solid #F2C230;
+}
+
+
+/* ---------- PLACAR: OS NÚMEROS DAS CINCO LIGAS ---------- */
+.placar {
+    padding: 44px 48px;
+    background-image: linear-gradient(to bottom, #12213B, #0B1628);
+    border-radius: 16px;
+}
+
+.placar h2 {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+}
+
+/* FLEXBOX: os números se distribuem e quebram linha no celular */
+.placar-itens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin: 12px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.placar-itens li {
+    flex-basis: 180px;
+    flex-grow: 1;
+    padding: 6px 0 6px 18px;
+    border-left: 4px solid #F2C230;
+    color: #C5CEDB;
+}
+
+.placar-itens strong {
+    display: block;
+    color: #F2C230;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.8rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+
+/* ---------- CAMPEÕES DA ÚLTIMA TEMPORADA ---------- */
+
+/* GRID: tabela ocupa 2 partes e os destaques ocupam 1 parte */
+.campeoes-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.destaques {
+    padding: 26px 28px 12px 28px;
+    background-color: #FFFFFF;
+    border-top: 6px solid #F2C230;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(18, 33, 59, 0.15);
+}
+
+.destaques h3 {
+    font-size: 1.6rem;
+}
+
+
+/* ---------- CITAÇÃO ---------- */
+.citacao {
+    margin: 0;
+    padding: 56px 64px;
+    background-image: linear-gradient(to right, #155C33, #1E7B45);
+    border-radius: 16px;
+    color: #FFFFFF;
+}
+
+.citacao p {
+    width: 80%;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.75rem;
+}
+
+.citacao footer {
+    color: #F2C230;
+    font-weight: bold;
+}
+
+
+/* ---------- RESPONSIVIDADE DA PÁGINA INICIAL ---------- */
+
+/* Telas médias: cards um pouco menores para as três colunas caberem */
+@media (max-width: 1100px) {
+    .campo {
+        gap: 20px 24px;
+        padding: 56px 32px 40px 32px;
+    }
+
+    .card-liga {
+        width: 205px;
+    }
+
+    /* Placar em duas colunas (2 x 2) */
+    .placar-itens li {
+        flex-basis: 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-conteudo {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+
+    /* GRID reorganizado: Brasileirão em cima e as outras em duplas */
+    .campo {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "brasileirao brasileirao"
+            "premier laliga"
+            "seriea bundesliga";
+        padding: 48px 24px 32px 24px;
+        background-image: url("../img/campo-vertical.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Os cards passam a ocupar toda a largura da coluna */
+    .card-liga {
+        width: auto;
+    }
+
+    .area-brasileirao .card-liga {
+        width: 230px;
+    }
+
+    .campeoes-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 3.4rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* GRID em uma coluna só no celular */
+    .campo {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "brasileirao"
+            "premier"
+            "laliga"
+            "seriea"
+            "bundesliga";
+    }
+
+    .area-brasileirao .card-liga {
+        width: auto;
+    }
+
+    .placar {
+        padding: 32px 24px;
+    }
+
+    /* Placar em uma coluna no celular */
+    .placar-itens li {
+        flex-basis: 100%;
+    }
+
+    .placar-itens strong {
+        font-size: 3rem;
+    }
+
+    .citacao {
+        padding: 36px 28px;
+    }
+
+    .citacao p {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+}

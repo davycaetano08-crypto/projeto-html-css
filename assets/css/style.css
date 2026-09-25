@@ -1,0 +1,534 @@
+/* ==========================================================================
+   LIGAS EM CAMPO - ESTILO GLOBAL (usado em todas as páginas)
+   --------------------------------------------------------------------------
+   Paleta de cores do site:
+   #12213B  azul-tinta    (cabeçalho, rodapé e títulos)
+   #1E7B45  verde-gramado (cor principal)
+   #155C33  verde-escuro  (detalhes)
+   #F2C230  amarelo-cartão (destaques)
+   #F4F6F2  cinza-claro   (fundo das páginas)
+   #DCE3D9  cinza-linha   (bordas)
+
+   NOTA PARA A CORREÇÃO
+   Todas as propriedades usadas no site foram vistas em aula. Alguns valores
+   vão além dos exemplos dos arquivos das aulas; conforme pede o enunciado,
+   eles estão explicados aqui, com link de referência:
+
+   - justify-content: space-between e center; align-items: center,
+     flex-start e flex-end. São outros valores das propriedades de Flexbox
+     da aula: space-between leva o primeiro item para o início e o último
+     para o fim, center centraliza e flex-end alinha no fim.
+     https://developer.mozilla.org/pt-BR/docs/Web/CSS/justify-content
+     https://developer.mozilla.org/pt-BR/docs/Web/CSS/align-items
+   - flex-direction: column. Coloca os itens um embaixo do outro (a aula
+     mostrou o valor row).
+     https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-direction
+   - border-top e border-left. Funcionam como o border-bottom da aula,
+     só que em outro lado da caixa.
+     https://developer.mozilla.org/pt-BR/docs/Web/CSS/border-top
+   - font-weight: normal e text-align: left/right. São os valores opostos
+     de bold e center, usados em aula.
+     https://developer.mozilla.org/pt-BR/docs/Web/CSS/font-weight
+     https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-align
+
+   Índice:
+   1. Base
+   2. Container e seções
+   3. Cabeçalho fixo e menu com submenu
+   4. Botões
+   5. Banner das páginas internas e trilha de navegação
+   6. Tabelas
+   7. Listas
+   8. Rodapé
+   9. Responsividade
+   ========================================================================== */
+
+
+/* ---------- 1. BASE ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F4F6F2;
+    color: #2B3440;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fonte condensada e pesada nos títulos, como em placares e camisas */
+h1, h2, h3 {
+    margin: 0 0 16px 0;
+    color: #12213B;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0 0 16px 0;
+}
+
+a {
+    color: #1E7B45;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #12213B;
+}
+
+img {
+    display: block;
+}
+
+
+/* ---------- 2. CONTAINER E SEÇÕES ---------- */
+.container {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+.secao {
+    padding: 80px 0 0 0;
+}
+
+.secao-titulo {
+    font-size: 2.75rem;
+}
+
+.secao-intro {
+    width: 70%;
+    margin: 0 0 32px 0;
+    color: #4A5663;
+    font-size: 1.15rem;
+}
+
+.nota {
+    margin: 12px 0 0 0;
+    color: #5A6673;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- 3. CABEÇALHO FIXO E MENU ---------- */
+
+/* position: sticky mantém o cabeçalho no topo durante a rolagem */
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    background-color: rgba(18, 33, 59, 0.94);
+    backdrop-filter: blur(8px);
+    border-bottom: 3px solid #F2C230;
+}
+
+/* FLEXBOX: marca à esquerda e menu à direita */
+.cabecalho-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* FLEXBOX: ícone da bola + nome do site */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.75rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.marca:hover {
+    color: #F2C230;
+}
+
+.marca img {
+    width: 38px;
+}
+
+/* FLEXBOX: itens do menu lado a lado */
+.menu-principal > ul {
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-principal li {
+    position: relative;
+}
+
+.menu-principal a {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 6px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-principal a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+}
+
+/* Página atual: sublinhado amarelo feito com sombra interna */
+.menu-principal .ativo {
+    color: #F2C230;
+    box-shadow: inset 0 -3px 0 #F2C230;
+}
+
+/* Submenu "Ligas": fica escondido e aparece ao passar o mouse
+   (mesma técnica do menu dropdown da aula de position) */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 240px;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+}
+
+.menu-principal li:hover .submenu {
+    display: block;
+}
+
+/* FLEXBOX: bandeira + nome da liga dentro do submenu */
+.submenu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #12213B;
+}
+
+.submenu a:hover {
+    background-color: #EEF3EC;
+    color: #12213B;
+}
+
+.submenu img {
+    width: 28px;
+}
+
+
+/* ---------- 4. BOTÕES ---------- */
+.botao {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.botao:hover {
+    transform: translate(0, -3px);
+}
+
+.botao-primario,
+.botao-primario:hover {
+    background-color: #F2C230;
+    color: #12213B;
+}
+
+.botao-secundario {
+    color: #FFFFFF;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.75);
+}
+
+.botao-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+}
+
+
+/* ---------- 5. BANNER DAS PÁGINAS INTERNAS E TRILHA ---------- */
+
+/* Listras de gramado feitas só com linear-gradient */
+.banner-pagina {
+    padding: 32px 0 56px 0;
+    background-image: linear-gradient(to right,
+        #1E7B45 0%, #1E7B45 12.5%,
+        #1B7140 12.5%, #1B7140 25%,
+        #1E7B45 25%, #1E7B45 37.5%,
+        #1B7140 37.5%, #1B7140 50%,
+        #1E7B45 50%, #1E7B45 62.5%,
+        #1B7140 62.5%, #1B7140 75%,
+        #1E7B45 75%, #1E7B45 87.5%,
+        #1B7140 87.5%, #1B7140 100%);
+    color: #FFFFFF;
+}
+
+.banner-pagina h1 {
+    margin: 20px 0 8px 0;
+    color: #FFFFFF;
+    font-size: 4.5rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.banner-pagina p {
+    width: 60%;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* FLEXBOX: trilha de navegação (Início › Página atual) */
+.trilha ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.95rem;
+}
+
+.trilha a {
+    color: #FFFFFF;
+}
+
+.trilha a:hover {
+    color: #F2C230;
+}
+
+
+/* ---------- 6. TABELAS (visual de tabela de classificação) ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(18, 33, 59, 0.15);
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #12213B;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+}
+
+tbody td {
+    border-bottom: 1px solid #DCE3D9;
+}
+
+tbody tr:hover {
+    background-color: #F1F7EF;
+}
+
+tfoot td {
+    background-color: #E9EFE6;
+    color: #4A5663;
+    font-size: 0.9rem;
+}
+
+.numero {
+    text-align: center;
+}
+
+.titulo-tabela {
+    margin: 0 0 12px 0;
+    font-size: 1.4rem;
+}
+
+/* Número da posição, como nas tabelas de classificação */
+.posicao {
+    display: inline-block;
+    width: 30px;
+    padding: 4px 0;
+    border-radius: 4px;
+    background-color: #12213B;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.lider .posicao {
+    background-color: #F2C230;
+    color: #12213B;
+}
+
+/* FLEXBOX dentro da célula: bandeira + nome da liga */
+.celula-liga {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.celula-liga img {
+    width: 32px;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+/* Informação complementar dentro de uma célula (ex.: temporada) */
+td small {
+    color: #5A6673;
+    font-weight: normal;
+}
+
+
+/* ---------- 7. LISTAS ---------- */
+
+/* Lista com uma bolinha de futebol no lugar do marcador
+   (list-style-image, visto na aula de display) */
+.lista-bola {
+    margin: 0;
+    padding: 0 0 0 24px;
+}
+
+.lista-bola li {
+    margin: 0 0 14px 0;
+    padding: 0 0 0 8px;
+    list-style-image: url("../img/icone-bola.png");
+}
+
+
+/* ---------- 8. RODAPÉ ---------- */
+.rodape {
+    margin: 96px 0 0 0;
+    background-color: #12213B;
+    color: #C5CEDB;
+}
+
+/* FLEXBOX: colunas do rodapé que quebram linha em telas menores */
+.rodape-colunas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 56px 0 40px 0;
+}
+
+.rodape-sobre {
+    flex-basis: 380px;
+}
+
+.rodape-links {
+    flex-basis: 180px;
+}
+
+.rodape h2 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+
+.rodape ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rodape li {
+    margin: 0 0 10px 0;
+}
+
+.rodape a {
+    color: #C5CEDB;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: #F2C230;
+}
+
+/* FLEXBOX: direitos autorais à esquerda e "voltar ao topo" à direita */
+.rodape-base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
+}
+
+.rodape-base p {
+    margin: 0;
+}
+
+.rodape-base a {
+    font-weight: bold;
+}
+
+
+/* ---------- 9. RESPONSIVIDADE ---------- */
+
+/* Telas menores que o container fixo: largura passa a ser relativa */
+@media (max-width: 1200px) {
+    .container {
+        width: 92%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+    .cabecalho-conteudo {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .secao {
+        padding: 56px 0 0 0;
+    }
+
+    .secao-titulo {
+        font-size: 2.2rem;
+    }
+
+    .secao-intro,
+    .banner-pagina p {
+        width: 100%;
+    }
+
+    .banner-pagina h1 {
+        font-size: 3.2rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .cabecalho {
+        position: relative;
+    }
+
+    .menu-principal > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-principal a {
+        padding: 10px 8px;
+        font-size: 0.95rem;
+    }
+
+    th, td {
+        padding: 10px 6px;
+        font-size: 0.85rem;
+    }
+
+    .celula-liga img {
+        width: 24px;
+    }
+}
+
+/* Celulares bem pequenos: esconde as bandeiras das tabelas para caber */
+@media (max-width: 400px) {
+    .celula-liga img {
+        display: none;
+    }
+}

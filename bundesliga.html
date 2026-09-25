@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundesliga | Ligas em Campo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/liga.css">
+</head>
+<body id="topo" class="liga-bundesliga">
+    <!--
+        LIGAS EM CAMPO - Página da liga: Bundesliga
+        Trabalho 1 - Web Básico (HTML5 semântico e CSS3)
+    -->
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="marca">
+                <img src="./assets/img/logo-bola.png" alt="Bola de futebol, símbolo do site">
+                Ligas em Campo
+            </a>
+            <nav class="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li>
+                        <a href="./index.html#escalacao" class="ativo">Ligas ▾</a>
+                        <!-- Submenu: aparece ao passar o mouse (CSS :hover) -->
+                        <ul class="submenu">
+                            <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                            <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                            <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                            <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                            <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main>
+        <!-- BANNER: FLEXBOX com o texto e a taça; a cor vem da classe do <body> -->
+        <section class="banner-liga">
+            <div class="container banner-conteudo">
+                <div class="banner-texto">
+                    <nav class="trilha" aria-label="Você está aqui">
+                        <ol>
+                            <li><a href="./index.html">Início</a> ›</li>
+                            <li><a href="./index.html#escalacao">Ligas</a> ›</li>
+                            <li>Bundesliga</li>
+                        </ol>
+                    </nav>
+                    <h1>Bundesliga</h1>
+                    <p class="banner-subtitulo">Campeonato Alemão</p>
+                    <p class="banner-resumo">Estádios lotados, ingressos acessíveis e torcedores com voz ativa nos clubes: a liga alemã tem uma das maiores médias de público do mundo.</p>
+                    <ul class="chips">
+                        <li>Desde 1963</li>
+                        <li>18 clubes</li>
+                        <li>34 rodadas</li>
+                    </ul>
+                </div>
+                <img src="./assets/img/taca-bundesliga.png" alt="Taça dourada com fitas preta, vermelha e amarela, as cores da bandeira da Alemanha" class="banner-taca">
+            </div>
+        </section>
+
+        <!-- SELETOR DE LIGAS: FLEXBOX (a liga atual fica destacada) -->
+        <nav class="trocar-liga" aria-label="Escolher outra liga">
+            <ul>
+                <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                <li><a href="./bundesliga.html" class="atual"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO: GRID com grid-template-areas (ver liga.css) -->
+        <div class="container conteudo-liga">
+            <article class="historia">
+                <h2>História</h2>
+                <p>Até os anos 1960, o campeão alemão era decidido em torneios regionais com uma fase final. A Bundesliga foi criada em 1962, e a primeira temporada, em <strong>1963/64</strong>, terminou com título do Colônia.</p>
+                <p>O Bayern de Munique só chegou à Bundesliga em 1965, mas virou o maior campeão do país: são 34 títulos da liga, com 11 seguidos entre 2012/13 e 2022/23. Em <strong>2025/26</strong>, o clube foi campeão com quatro rodadas de antecedência, e Harry Kane fez 36 gols.</p>
+                <p>Com 18 clubes e 34 rodadas, é a menor das cinco ligas deste site. Os dois últimos caem direto, e o 16º colocado disputa uma repescagem contra o terceiro da segunda divisão. A regra 50+1 garante que os sócios mantenham a maioria dos votos nos clubes, limitando o poder de investidores.</p>
+            </article>
+
+            <aside class="ficha">
+                <h2>Ficha técnica</h2>
+                <img src="./assets/img/bandeira-alemanha.png" alt="Bandeira da Alemanha" class="ficha-bandeira">
+                <dl>
+                    <dt>País</dt>
+                    <dd>Alemanha</dd>
+                    <dt>Organização</dt>
+                    <dd>DFL</dd>
+                    <dt>Primeira edição</dt>
+                    <dd>1963/64</dd>
+                    <dt>Clubes</dt>
+                    <dd>18</dd>
+                    <dt>Formato</dt>
+                    <dd>Pontos corridos, 34 rodadas</dd>
+                    <dt>Rebaixamento</dt>
+                    <dd>2 clubes e 1 na repescagem</dd>
+                    <dt>Maior campeão</dt>
+                    <dd>Bayern de Munique (34)</dd>
+                    <dt>Campeão 2025/26</dt>
+                    <dd>Bayern de Munique</dd>
+                    <dt>Maior artilheiro</dt>
+                    <dd>Gerd Müller (365 gols)</dd>
+                </dl>
+                <a href="https://www.bundesliga.com" class="botao-site" target="_blank">Visitar o site da Bundesliga</a>
+            </aside>
+
+            <section class="curiosidades">
+                <h2>Você sabia?</h2>
+                <ul class="lista-bola">
+                    <li>Em 2023/24, o Bayer Leverkusen foi o primeiro campeão invicto da história da Bundesliga.</li>
+                    <li>A arquibancada sul do estádio do Borussia Dortmund, a Muralha Amarela, recebe cerca de 25 mil torcedores em pé.</li>
+                    <li>Gerd Müller fez 40 gols em 1971/72, recorde que durou até 2020/21, quando Robert Lewandowski marcou 41.</li>
+                    <li>Em 1997/98, o Kaiserslautern foi campeão logo depois de subir da segunda divisão, caso único na história da liga.</li>
+                    <li>Em 2025/26, a média de público foi de 42.311 torcedores por jogo.</li>
+                </ul>
+            </section>
+
+            <section class="campeoes">
+                <h2>Campeões</h2>
+                <div class="tabelas-campeoes">
+                    <div>
+                        <h3 class="titulo-tabela">Maiores campeões</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pos.</th>
+                                    <th>Clube</th>
+                                    <th class="numero">Títulos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="lider">
+                                    <td><span class="posicao">1</span></td>
+                                    <td>Bayern de Munique</td>
+                                    <td class="numero">34</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">2</span></td>
+                                    <td>Borussia Dortmund</td>
+                                    <td class="numero">5</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">2</span></td>
+                                    <td>Borussia Mönchengladbach</td>
+                                    <td class="numero">5</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">4</span></td>
+                                    <td>Werder Bremen</td>
+                                    <td class="numero">4</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">5</span></td>
+                                    <td>Hamburgo e Stuttgart</td>
+                                    <td class="numero">3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="nota">Títulos desde 1963. Contando o Campeonato Alemão de 1932, o Bayern soma 35.</p>
+                    </div>
+                    <div>
+                        <h3 class="titulo-tabela">Últimos campeões</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Temporada</th>
+                                    <th>Campeão</th>
+                                    <th>Vice</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025/26</td>
+                                    <td><strong>Bayern de Munique</strong></td>
+                                    <td>Borussia Dortmund</td>
+                                </tr>
+                                <tr>
+                                    <td>2024/25</td>
+                                    <td><strong>Bayern de Munique</strong></td>
+                                    <td>Bayer Leverkusen</td>
+                                </tr>
+                                <tr>
+                                    <td>2023/24</td>
+                                    <td><strong>Bayer Leverkusen</strong></td>
+                                    <td>Stuttgart</td>
+                                </tr>
+                                <tr>
+                                    <td>2022/23</td>
+                                    <td><strong>Bayern de Munique</strong></td>
+                                    <td>Borussia Dortmund</td>
+                                </tr>
+                                <tr>
+                                    <td>2021/22</td>
+                                    <td><strong>Bayern de Munique</strong></td>
+                                    <td>Borussia Dortmund</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OS 10 PRINCIPAIS JOGADORES: lista numerada (ol) em GRID; cada item em FLEXBOX -->
+            <section class="jogadores">
+                <h2>Os 10 principais jogadores de 2025/26</h2>
+                <p class="jogadores-intro">Os artilheiros da temporada: o ranking é feito pelo número de gols marcados na liga.</p>
+                <ol class="lista-jogadores">
+                    <li class="jogador lider">
+                        <span class="posicao">1</span>
+                        <img src="./assets/img/jogadores/harry-kane.png" alt="Ilustração de jogador com a camisa do Bayern de Munique">
+                        <p class="jogador-nome">
+                            <strong>Harry Kane</strong>
+                            <small>Bayern de Munique</small>
+                        </p>
+                        <p class="jogador-gols"><strong>36</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">2</span>
+                        <img src="./assets/img/jogadores/deniz-undav.png" alt="Ilustração de jogador com a camisa do Stuttgart">
+                        <p class="jogador-nome">
+                            <strong>Deniz Undav</strong>
+                            <small>Stuttgart</small>
+                        </p>
+                        <p class="jogador-gols"><strong>20</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">3</span>
+                        <img src="./assets/img/jogadores/serhou-guirassy.png" alt="Ilustração de jogador com a camisa do Borussia Dortmund">
+                        <p class="jogador-nome">
+                            <strong>Serhou Guirassy</strong>
+                            <small>Borussia Dortmund</small>
+                        </p>
+                        <p class="jogador-gols"><strong>17</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">4</span>
+                        <img src="./assets/img/jogadores/patrik-schick.png" alt="Ilustração de jogador com a camisa do Bayer Leverkusen">
+                        <p class="jogador-nome">
+                            <strong>Patrik Schick</strong>
+                            <small>Bayer Leverkusen</small>
+                        </p>
+                        <p class="jogador-gols"><strong>16</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">5</span>
+                        <img src="./assets/img/jogadores/luis-diaz.png" alt="Ilustração de jogador com a camisa do Bayern de Munique">
+                        <p class="jogador-nome">
+                            <strong>Luis Díaz</strong>
+                            <small>Bayern de Munique</small>
+                        </p>
+                        <p class="jogador-gols"><strong>15</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">5</span>
+                        <img src="./assets/img/jogadores/michael-olise.png" alt="Ilustração de jogador com a camisa do Bayern de Munique">
+                        <p class="jogador-nome">
+                            <strong>Michael Olise</strong>
+                            <small>Bayern de Munique</small>
+                        </p>
+                        <p class="jogador-gols"><strong>15</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">7</span>
+                        <img src="./assets/img/jogadores/andrej-kramaric.png" alt="Ilustração de jogador com a camisa do Hoffenheim">
+                        <p class="jogador-nome">
+                            <strong>Andrej Kramarić</strong>
+                            <small>Hoffenheim</small>
+                        </p>
+                        <p class="jogador-gols"><strong>14</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">8</span>
+                        <img src="./assets/img/jogadores/christoph-baumgartner.png" alt="Ilustração de jogador com a camisa do RB Leipzig">
+                        <p class="jogador-nome">
+                            <strong>Christoph Baumgartner</strong>
+                            <small>RB Leipzig</small>
+                        </p>
+                        <p class="jogador-gols"><strong>13</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">8</span>
+                        <img src="./assets/img/jogadores/ermedin-demirovic.png" alt="Ilustração de jogador com a camisa do Stuttgart">
+                        <p class="jogador-nome">
+                            <strong>Ermedin Demirović</strong>
+                            <small>Stuttgart</small>
+                        </p>
+                        <p class="jogador-gols"><strong>13</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">8</span>
+                        <img src="./assets/img/jogadores/haris-tabakovic.png" alt="Ilustração de jogador com a camisa do Borussia Mönchengladbach">
+                        <p class="jogador-nome">
+                            <strong>Haris Tabaković</strong>
+                            <small>Borussia Mönchengladbach</small>
+                        </p>
+                        <p class="jogador-gols"><strong>13</strong> gols</p>
+                    </li>
+                </ol>
+                <p class="nota">Jogadores com o mesmo número de gols dividem a posição. Cinco jogadores terminaram com 13 gols; ficaram com as três últimas vagas os que marcaram menos gols de pênalti e, no empate entre Demirović e El Mala, quem jogou menos partidas. Também fizeram 13 gols: Said El Mala (Colônia) e Jonathan Burkardt (Eintracht Frankfurt). As imagens são ilustrações com as cores de cada clube, não fotos dos jogadores. Fonte: <a href="https://datencenter.dfb.de/competitions/bundesliga/seasons/2025-2026/top_scorer" target="_blank">DFB (lista oficial)</a>.</p>
+            </section>
+
+            <section class="classicos">
+                <h2>Grandes clássicos</h2>
+                <div class="classicos-grade">
+                    <article class="classico">
+                        <h3>Der Klassiker</h3>
+                        <p class="classico-times">Bayern de Munique x Borussia Dortmund</p>
+                        <p>O grande clássico moderno do país, entre os dois clubes com os maiores públicos da Alemanha.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Revierderby</h3>
+                        <p class="classico-times">Borussia Dortmund x Schalke 04</p>
+                        <p>O clássico da região do Ruhr, área industrial onde o futebol é quase uma religião.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Nordderby</h3>
+                        <p class="classico-times">Werder Bremen x Hamburgo</p>
+                        <p>A rivalidade do norte da Alemanha, entre duas cidades portuárias.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Clássico do Reno</h3>
+                        <p class="classico-times">Colônia x Borussia Mönchengladbach</p>
+                        <p>Duelo entre vizinhos da região do rio Reno.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- NAVEGAÇÃO ENTRE LIGAS: FLEXBOX com um link em cada ponta -->
+        <nav class="container paginacao" aria-label="Liga anterior e próxima liga">
+            <a href="./serie-a.html">
+                <span>Liga anterior</span>
+                <strong>Serie A</strong>
+            </a>
+            <a href="./brasileirao.html">
+                <span>Próxima liga</span>
+                <strong>Brasileirão</strong>
+            </a>
+        </nav>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <div class="container rodape-colunas">
+            <section class="rodape-sobre">
+                <h2>Ligas em Campo</h2>
+                <p>Guia das cinco grandes ligas do futebol.</p>
+                <p>Dados atualizados até o fim da temporada europeia 2025/26 e do Brasileirão 2025.</p>
+            </section>
+            <nav class="rodape-links" aria-label="Mapa do site">
+                <h2>Navegue</h2>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+            <nav class="rodape-links" aria-label="Ligas">
+                <h2>Ligas</h2>
+                <ul>
+                    <li><a href="./brasileirao.html">Brasileirão</a></li>
+                    <li><a href="./premier-league.html">Premier League</a></li>
+                    <li><a href="./la-liga.html">La Liga</a></li>
+                    <li><a href="./serie-a.html">Serie A</a></li>
+                    <li><a href="./bundesliga.html">Bundesliga</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container rodape-base">
+            <p>&copy; 2026 Ligas em Campo.</p>
+            <a href="#topo">Voltar ao topo</a>
+        </div>
+    </footer>
+</body>
+</html>

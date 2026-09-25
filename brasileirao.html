@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileirão | Ligas em Campo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/liga.css">
+</head>
+<body id="topo" class="liga-brasileirao">
+    <!--
+        LIGAS EM CAMPO - Página da liga: Brasileirão
+        Trabalho 1 - Web Básico (HTML5 semântico e CSS3)
+    -->
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="marca">
+                <img src="./assets/img/logo-bola.png" alt="Bola de futebol, símbolo do site">
+                Ligas em Campo
+            </a>
+            <nav class="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li>
+                        <a href="./index.html#escalacao" class="ativo">Ligas ▾</a>
+                        <!-- Submenu: aparece ao passar o mouse (CSS :hover) -->
+                        <ul class="submenu">
+                            <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                            <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                            <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                            <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                            <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main>
+        <!-- BANNER: FLEXBOX com o texto e a taça; a cor vem da classe do <body> -->
+        <section class="banner-liga">
+            <div class="container banner-conteudo">
+                <div class="banner-texto">
+                    <nav class="trilha" aria-label="Você está aqui">
+                        <ol>
+                            <li><a href="./index.html">Início</a> ›</li>
+                            <li><a href="./index.html#escalacao">Ligas</a> ›</li>
+                            <li>Brasileirão</li>
+                        </ol>
+                    </nav>
+                    <h1>Brasileirão</h1>
+                    <p class="banner-subtitulo">Campeonato Brasileiro Série A</p>
+                    <p class="banner-resumo">A liga do país pentacampeão do mundo é conhecida pelo equilíbrio: desde 1959, 17 clubes diferentes já foram campeões brasileiros.</p>
+                    <ul class="chips">
+                        <li>Desde 1959</li>
+                        <li>20 clubes</li>
+                        <li>38 rodadas</li>
+                    </ul>
+                </div>
+                <img src="./assets/img/taca-brasileirao.png" alt="Taça dourada com fitas verde, amarela e azul, as cores da bandeira do Brasil" class="banner-taca">
+            </div>
+        </section>
+
+        <!-- SELETOR DE LIGAS: FLEXBOX (a liga atual fica destacada) -->
+        <nav class="trocar-liga" aria-label="Escolher outra liga">
+            <ul>
+                <li><a href="./brasileirao.html" class="atual"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO: GRID com grid-template-areas (ver liga.css) -->
+        <div class="container conteudo-liga">
+            <article class="historia">
+                <h2>História</h2>
+                <p>O Campeonato Brasileiro começou em <strong>1959</strong>, com a Taça Brasil, torneio de mata-mata que reunia os campeões estaduais. O primeiro campeão foi o Bahia. Entre 1967 e 1970 também foi disputado o Torneio Roberto Gomes Pedrosa, o Robertão, e em 2010 a CBF passou a reconhecer os vencedores desses torneios como campeões brasileiros.</p>
+                <p>Com o nome de Campeonato Nacional, a competição começou em <strong>1971</strong>, com título do Atlético Mineiro. Durante muitos anos o regulamento mudava quase toda temporada: em 1979, por exemplo, 94 clubes participaram, e o campeão era sempre decidido em jogos eliminatórios e finais.</p>
+                <p>Desde <strong>2003</strong> o Brasileirão é disputado por pontos corridos, e desde 2006 com 20 clubes que se enfrentam em turno e returno. O Cruzeiro foi o primeiro campeão nesse formato. Hoje os quatro últimos colocados caem para a Série B, e os primeiros garantem vaga na Copa Libertadores.</p>
+            </article>
+
+            <aside class="ficha">
+                <h2>Ficha técnica</h2>
+                <img src="./assets/img/bandeira-brasil.png" alt="Bandeira do Brasil" class="ficha-bandeira">
+                <dl>
+                    <dt>País</dt>
+                    <dd>Brasil</dd>
+                    <dt>Organização</dt>
+                    <dd>CBF</dd>
+                    <dt>Primeira edição</dt>
+                    <dd>1959</dd>
+                    <dt>Clubes</dt>
+                    <dd>20</dd>
+                    <dt>Formato</dt>
+                    <dd>Pontos corridos, 38 rodadas</dd>
+                    <dt>Rebaixamento</dt>
+                    <dd>4 clubes</dd>
+                    <dt>Maior campeão</dt>
+                    <dd>Palmeiras (12)</dd>
+                    <dt>Campeão 2025</dt>
+                    <dd>Flamengo</dd>
+                    <dt>Maior artilheiro</dt>
+                    <dd>Roberto Dinamite (190 gols)</dd>
+                </dl>
+                <a href="https://www.cbf.com.br" class="botao-site" target="_blank">Visitar o site da CBF</a>
+            </aside>
+
+            <section class="curiosidades">
+                <h2>Você sabia?</h2>
+                <ul class="lista-bola">
+                    <li>Em 2019, o Flamengo somou 90 pontos, recorde da era com 20 clubes.</li>
+                    <li>Santos (1962 e 1963), Flamengo (2019 e 2025) e Botafogo (2024) são os únicos que venceram o Brasileirão e a Libertadores no mesmo ano.</li>
+                    <li>É a liga que mais rebaixa entre as cinco deste site: quatro clubes caem todos os anos.</li>
+                    <li>Roberto Dinamite, ídolo do Vasco, marcou 190 gols e é o maior artilheiro da história do campeonato.</li>
+                    <li>Em 2003, primeiro ano dos pontos corridos, o Cruzeiro ganhou o Brasileirão, a Copa do Brasil e o Campeonato Mineiro: a tríplice coroa.</li>
+                </ul>
+            </section>
+
+            <section class="campeoes">
+                <h2>Campeões</h2>
+                <div class="tabelas-campeoes">
+                    <div>
+                        <h3 class="titulo-tabela">Maiores campeões</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pos.</th>
+                                    <th>Clube</th>
+                                    <th class="numero">Títulos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="lider">
+                                    <td><span class="posicao">1</span></td>
+                                    <td>Palmeiras</td>
+                                    <td class="numero">12</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">2</span></td>
+                                    <td>Flamengo</td>
+                                    <td class="numero">8</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">2</span></td>
+                                    <td>Santos</td>
+                                    <td class="numero">8</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">4</span></td>
+                                    <td>Corinthians</td>
+                                    <td class="numero">7</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="posicao">5</span></td>
+                                    <td>São Paulo</td>
+                                    <td class="numero">6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="nota">Contagem oficial da CBF, que desde 2010 inclui a Taça Brasil e o Robertão.</p>
+                    </div>
+                    <div>
+                        <h3 class="titulo-tabela">Últimos campeões</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Temporada</th>
+                                    <th>Campeão</th>
+                                    <th>Vice</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025</td>
+                                    <td><strong>Flamengo</strong></td>
+                                    <td>Palmeiras</td>
+                                </tr>
+                                <tr>
+                                    <td>2024</td>
+                                    <td><strong>Botafogo</strong></td>
+                                    <td>Palmeiras</td>
+                                </tr>
+                                <tr>
+                                    <td>2023</td>
+                                    <td><strong>Palmeiras</strong></td>
+                                    <td>Grêmio</td>
+                                </tr>
+                                <tr>
+                                    <td>2022</td>
+                                    <td><strong>Palmeiras</strong></td>
+                                    <td>Internacional</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td>
+                                    <td><strong>Atlético Mineiro</strong></td>
+                                    <td>Flamengo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OS 10 PRINCIPAIS JOGADORES: lista numerada (ol) em GRID; cada item em FLEXBOX -->
+            <section class="jogadores">
+                <h2>Os 10 principais jogadores de 2025</h2>
+                <p class="jogadores-intro">Os artilheiros da temporada: o ranking é feito pelo número de gols marcados na liga.</p>
+                <ol class="lista-jogadores">
+                    <li class="jogador lider">
+                        <span class="posicao">1</span>
+                        <img src="./assets/img/jogadores/kaio-jorge.png" alt="Ilustração de jogador com a camisa do Cruzeiro">
+                        <p class="jogador-nome">
+                            <strong>Kaio Jorge</strong>
+                            <small>Cruzeiro</small>
+                        </p>
+                        <p class="jogador-gols"><strong>21</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">2</span>
+                        <img src="./assets/img/jogadores/arrascaeta.png" alt="Ilustração de jogador com a camisa do Flamengo">
+                        <p class="jogador-nome">
+                            <strong>Arrascaeta</strong>
+                            <small>Flamengo</small>
+                        </p>
+                        <p class="jogador-gols"><strong>18</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">3</span>
+                        <img src="./assets/img/jogadores/vitor-roque.png" alt="Ilustração de jogador com a camisa do Palmeiras">
+                        <p class="jogador-nome">
+                            <strong>Vitor Roque</strong>
+                            <small>Palmeiras</small>
+                        </p>
+                        <p class="jogador-gols"><strong>16</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">4</span>
+                        <img src="./assets/img/jogadores/rayan.png" alt="Ilustração de jogador com a camisa do Vasco">
+                        <p class="jogador-nome">
+                            <strong>Rayan</strong>
+                            <small>Vasco</small>
+                        </p>
+                        <p class="jogador-gols"><strong>14</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">4</span>
+                        <img src="./assets/img/jogadores/vegetti.png" alt="Ilustração de jogador com a camisa do Vasco">
+                        <p class="jogador-nome">
+                            <strong>Vegetti</strong>
+                            <small>Vasco</small>
+                        </p>
+                        <p class="jogador-gols"><strong>14</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">6</span>
+                        <img src="./assets/img/jogadores/reinaldo.png" alt="Ilustração de jogador com a camisa do Mirassol">
+                        <p class="jogador-nome">
+                            <strong>Reinaldo</strong>
+                            <small>Mirassol</small>
+                        </p>
+                        <p class="jogador-gols"><strong>13</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">7</span>
+                        <img src="./assets/img/jogadores/carlos-vinicius.png" alt="Ilustração de jogador com a camisa do Grêmio">
+                        <p class="jogador-nome">
+                            <strong>Carlos Vinícius</strong>
+                            <small>Grêmio</small>
+                        </p>
+                        <p class="jogador-gols"><strong>12</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">7</span>
+                        <img src="./assets/img/jogadores/flaco-lopez.png" alt="Ilustração de jogador com a camisa do Palmeiras">
+                        <p class="jogador-nome">
+                            <strong>Flaco López</strong>
+                            <small>Palmeiras</small>
+                        </p>
+                        <p class="jogador-gols"><strong>12</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">7</span>
+                        <img src="./assets/img/jogadores/pedro.png" alt="Ilustração de jogador com a camisa do Flamengo">
+                        <p class="jogador-nome">
+                            <strong>Pedro</strong>
+                            <small>Flamengo</small>
+                        </p>
+                        <p class="jogador-gols"><strong>12</strong> gols</p>
+                    </li>
+                    <li class="jogador">
+                        <span class="posicao">10</span>
+                        <img src="./assets/img/jogadores/pedro-raul.png" alt="Ilustração de jogador com a camisa do Ceará">
+                        <p class="jogador-nome">
+                            <strong>Pedro Raúl</strong>
+                            <small>Ceará</small>
+                        </p>
+                        <p class="jogador-gols"><strong>11</strong> gols</p>
+                    </li>
+                </ol>
+                <p class="nota">Jogadores com o mesmo número de gols dividem a posição. Três jogadores terminaram com 11 gols; ficou com a 10ª vaga quem marcou menos gols de pênalti. Também fizeram 11 gols: Alan Patrick (Internacional) e Willian José (Bahia). As imagens são ilustrações com as cores de cada clube, não fotos dos jogadores. Fonte: <a href="https://www.goal.com/br/listas/campeonato-brasileiro-artilheiros-garcons-competicao-2025/blt5b7307ba7f495b5b" target="_blank">Goal Brasil</a>.</p>
+            </section>
+
+            <section class="classicos">
+                <h2>Grandes clássicos</h2>
+                <div class="classicos-grade">
+                    <article class="classico">
+                        <h3>Fla-Flu</h3>
+                        <p class="classico-times">Flamengo x Fluminense</p>
+                        <p>Disputado desde 1912, é um dos clássicos mais famosos do país e já levou multidões ao Maracanã.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Derby Paulista</h3>
+                        <p class="classico-times">Corinthians x Palmeiras</p>
+                        <p>Rivalidade que começou em 1917 e divide a maior cidade do Brasil.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Grenal</h3>
+                        <p class="classico-times">Grêmio x Internacional</p>
+                        <p>O clássico de Porto Alegre é disputado desde 1909 e para o Rio Grande do Sul.</p>
+                    </article>
+                    <article class="classico">
+                        <h3>Clássico dos Milhões</h3>
+                        <p class="classico-times">Flamengo x Vasco</p>
+                        <p>Ganhou esse nome por reunir duas das maiores torcidas do país.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- NAVEGAÇÃO ENTRE LIGAS: FLEXBOX com um link em cada ponta -->
+        <nav class="container paginacao" aria-label="Liga anterior e próxima liga">
+            <a href="./bundesliga.html">
+                <span>Liga anterior</span>
+                <strong>Bundesliga</strong>
+            </a>
+            <a href="./premier-league.html">
+                <span>Próxima liga</span>
+                <strong>Premier League</strong>
+            </a>
+        </nav>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <div class="container rodape-colunas">
+            <section class="rodape-sobre">
+                <h2>Ligas em Campo</h2>
+                <p>Guia das cinco grandes ligas do futebol.</p>
+                <p>Dados atualizados até o fim da temporada europeia 2025/26 e do Brasileirão 2025.</p>
+            </section>
+            <nav class="rodape-links" aria-label="Mapa do site">
+                <h2>Navegue</h2>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+            <nav class="rodape-links" aria-label="Ligas">
+                <h2>Ligas</h2>
+                <ul>
+                    <li><a href="./brasileirao.html">Brasileirão</a></li>
+                    <li><a href="./premier-league.html">Premier League</a></li>
+                    <li><a href="./la-liga.html">La Liga</a></li>
+                    <li><a href="./serie-a.html">Serie A</a></li>
+                    <li><a href="./bundesliga.html">Bundesliga</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container rodape-base">
+            <p>&copy; 2026 Ligas em Campo.</p>
+            <a href="#topo">Voltar ao topo</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* ==========================================================================
+   LIGAS EM CAMPO - COMPARATIVO (comparativo.html)
+   ========================================================================== */
+
+
+/* ---------- TABELA RAIO-X (cabeçalho em dois níveis) ---------- */
+
+/* Células que agrupam colunas (colspan) ficam centralizadas */
+.tabela-raio-x .grupo {
+    background-color: #1E7B45;
+    text-align: center;
+}
+
+/* Segunda linha do cabeçalho em um tom mais claro */
+.tabela-raio-x thead tr:last-child th {
+    background-color: #1D3357;
+}
+
+.tabela-raio-x tfoot td {
+    font-weight: bold;
+}
+
+
+/* ---------- TABELA DE ARTILHEIROS ---------- */
+
+/* Coluna destacada com <colgroup> e <col> (visto na aula de tabelas) */
+.coluna-destaque {
+    background-color: #FFF6D6;
+}
+
+.gols {
+    color: #12213B;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+/* ---------- QUAL LIGA COMBINA COM VOCÊ ---------- */
+
+/* GRID de duas colunas; o Brasileirão ocupa a linha inteira */
+.perfis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.perfil-destaque {
+    grid-column: 1/3;
+}
+
+/* FLEXBOX: escudo à esquerda e texto à direita */
+.perfil {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(18, 33, 59, 0.15);
+}
+
+.perfil img {
+    width: 64px;
+    border-radius: 50%;
+}
+
+.perfil h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+}
+
+.perfil p {
+    color: #4A5663;
+}
+
+.perfil-brasileirao {
+    border-top: 6px solid #009C3B;
+}
+
+.perfil-premier {
+    border-top: 6px solid #CE1124;
+}
+
+.perfil-laliga {
+    border-top: 6px solid #F1BF00;
+}
+
+.perfil-seriea {
+    border-top: 6px solid #0A5BAA;
+}
+
+.perfil-bundesliga {
+    border-top: 6px solid #111111;
+}
+
+
+/* ---------- RESPONSIVIDADE DO COMPARATIVO ---------- */
+@media (max-width: 900px) {
+    /* Tabela raio-x mais compacta em tablets */
+    .tabela-raio-x th,
+    .tabela-raio-x td {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 800px) {
+    .perfis {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-destaque {
+        grid-column: 1/2;
+    }
+
+    /* Em telas menores, o grupo "Formato" e a coluna do campeão mais
+       recente da tabela raio-x são escondidos (display: none) para a
+       tabela caber na tela. Nenhum colspan aponta para essas colunas,
+       então o cabeçalho continua alinhado. */
+    .col-formato,
+    .col-atual {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    /* FLEXBOX em coluna: escudo em cima do texto */
+    .perfil {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

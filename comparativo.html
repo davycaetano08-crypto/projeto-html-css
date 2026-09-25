@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativo | Ligas em Campo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/comparativo.css">
+</head>
+<body id="topo">
+    <!--
+        LIGAS EM CAMPO - Comparativo entre as ligas
+        Trabalho 1 - Web Básico (HTML5 semântico e CSS3)
+    -->
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="marca">
+                <img src="./assets/img/logo-bola.png" alt="Bola de futebol, símbolo do site">
+                Ligas em Campo
+            </a>
+            <nav class="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li>
+                        <a href="./index.html#escalacao">Ligas ▾</a>
+                        <!-- Submenu: aparece ao passar o mouse (CSS :hover) -->
+                        <ul class="submenu">
+                            <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                            <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                            <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                            <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                            <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./comparativo.html" class="ativo">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main>
+        <!-- BANNER com listras de gramado (linear-gradient) -->
+        <section class="banner-pagina">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está aqui">
+                    <ol>
+                        <li><a href="./index.html">Início</a> ›</li>
+                        <li>Comparativo</li>
+                    </ol>
+                </nav>
+                <h1>Comparativo das ligas</h1>
+                <p>As cinco ligas lado a lado: formato, maiores campeões, recordes de pontos e artilheiros.</p>
+            </div>
+        </section>
+
+        <!-- RAIO-X: tabela com cabeçalho em dois níveis (colspan e rowspan) -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Raio-X das cinco ligas</h2>
+                <p class="secao-intro">Quantos clubes cada liga tem, quantos jogos são disputados por temporada e quem mais venceu.</p>
+                <table class="tabela-raio-x">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Liga</th>
+                            <th colspan="3" class="grupo col-formato">Formato</th>
+                            <th colspan="2" class="grupo">Maior campeão</th>
+                            <th rowspan="2" class="col-atual">Campeão mais recente</th>
+                        </tr>
+                        <tr>
+                            <th class="col-formato numero">Clubes</th>
+                            <th class="col-formato numero">Rodadas</th>
+                            <th class="col-formato numero">Jogos</th>
+                            <th>Clube</th>
+                            <th class="numero">Títulos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="./brasileirao.html" class="celula-liga"><img src="./assets/img/bandeira-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></td>
+                            <td class="col-formato numero">20</td>
+                            <td class="col-formato numero">38</td>
+                            <td class="col-formato numero">380</td>
+                            <td>Palmeiras</td>
+                            <td class="numero">12</td>
+                            <td class="col-atual">Flamengo (2025)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="./premier-league.html" class="celula-liga"><img src="./assets/img/bandeira-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></td>
+                            <td class="col-formato numero">20</td>
+                            <td class="col-formato numero">38</td>
+                            <td class="col-formato numero">380</td>
+                            <td>Manchester United</td>
+                            <td class="numero">13</td>
+                            <td class="col-atual">Arsenal (2025/26)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="./la-liga.html" class="celula-liga"><img src="./assets/img/bandeira-espanha.png" alt="Bandeira da Espanha"> La Liga</a></td>
+                            <td class="col-formato numero">20</td>
+                            <td class="col-formato numero">38</td>
+                            <td class="col-formato numero">380</td>
+                            <td>Real Madrid</td>
+                            <td class="numero">36</td>
+                            <td class="col-atual">Barcelona (2025/26)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="./serie-a.html" class="celula-liga"><img src="./assets/img/bandeira-italia.png" alt="Bandeira da Itália"> Serie A</a></td>
+                            <td class="col-formato numero">20</td>
+                            <td class="col-formato numero">38</td>
+                            <td class="col-formato numero">380</td>
+                            <td>Juventus</td>
+                            <td class="numero">36</td>
+                            <td class="col-atual">Inter de Milão (2025/26)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="./bundesliga.html" class="celula-liga"><img src="./assets/img/bandeira-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></td>
+                            <td class="col-formato numero">18</td>
+                            <td class="col-formato numero">34</td>
+                            <td class="col-formato numero">306</td>
+                            <td>Bayern de Munique</td>
+                            <td class="numero">34</td>
+                            <td class="col-atual">Bayern de Munique (2025/26)</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total</td>
+                            <td class="col-formato numero">98</td>
+                            <td class="col-formato numero">186</td>
+                            <td class="col-formato numero">1.826</td>
+                            <td colspan="2">Real Madrid e Juventus: 36 títulos cada</td>
+                            <td class="col-atual">5 campeões diferentes</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p class="nota">Premier League: títulos a partir de 1992 (com a antiga primeira divisão, Liverpool e Manchester United têm 20 cada). Bundesliga: títulos a partir de 1963 (com o Campeonato Alemão de 1932, o Bayern soma 35).</p>
+            </div>
+        </section>
+
+        <!-- RECORDES: tabela ordenada pelo aproveitamento -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Recordes de pontos</h2>
+                <p class="secao-intro">A maior pontuação de um campeão em cada liga. Como a Bundesliga tem só 34 rodadas, o aproveitamento (pontos conquistados sobre pontos possíveis) é a forma justa de comparar.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Campeão</th>
+                            <th class="numero">Pontos</th>
+                            <th class="numero">%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="lider">
+                            <td><span class="posicao">1</span></td>
+                            <td><strong>Juventus</strong><br><small>Serie A, 2013/14</small></td>
+                            <td class="numero">102</td>
+                            <td class="numero"><strong>89,5%</strong></td>
+                        </tr>
+                        <tr>
+                            <td><span class="posicao">2</span></td>
+                            <td><strong>Bayern de Munique</strong><br><small>Bundesliga, 2012/13</small></td>
+                            <td class="numero">91</td>
+                            <td class="numero"><strong>89,2%</strong></td>
+                        </tr>
+                        <tr>
+                            <td><span class="posicao">3</span></td>
+                            <td><strong>Manchester City</strong><br><small>Premier League, 2017/18</small></td>
+                            <td class="numero">100</td>
+                            <td class="numero"><strong>87,7%</strong></td>
+                        </tr>
+                        <tr>
+                            <td><span class="posicao">3</span></td>
+                            <td><strong>Real Madrid e Barcelona</strong><br><small>La Liga, 2011/12 e 2012/13</small></td>
+                            <td class="numero">100</td>
+                            <td class="numero"><strong>87,7%</strong></td>
+                        </tr>
+                        <tr>
+                            <td><span class="posicao">5</span></td>
+                            <td><strong>Flamengo</strong><br><small>Brasileirão, 2019</small></td>
+                            <td class="numero">90</td>
+                            <td class="numero"><strong>78,9%</strong></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">% = aproveitamento. Vitória vale 3 pontos em todas as ligas: em 38 rodadas o máximo é 114 pontos; em 34 rodadas, 102. No Brasileirão, consideramos a era com 20 clubes (desde 2006).</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- ARTILHEIROS: coluna de gols destacada com colgroup -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Maiores artilheiros</h2>
+                <p class="secao-intro">Os jogadores que mais marcaram gols na história de cada liga.</p>
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col class="coluna-destaque">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Liga</th>
+                            <th>Jogador</th>
+                            <th class="numero">Gols</th>
+                            <th>Principal clube</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>La Liga</td>
+                            <td>Lionel Messi <small>(Argentina)</small></td>
+                            <td class="numero gols">474</td>
+                            <td>Barcelona</td>
+                        </tr>
+                        <tr>
+                            <td>Bundesliga</td>
+                            <td>Gerd Müller <small>(Alemanha)</small></td>
+                            <td class="numero gols">365</td>
+                            <td>Bayern de Munique</td>
+                        </tr>
+                        <tr>
+                            <td>Serie A</td>
+                            <td>Silvio Piola <small>(Itália)</small></td>
+                            <td class="numero gols">274</td>
+                            <td>Lazio</td>
+                        </tr>
+                        <tr>
+                            <td>Premier League</td>
+                            <td>Alan Shearer <small>(Inglaterra)</small></td>
+                            <td class="numero gols">260</td>
+                            <td>Newcastle</td>
+                        </tr>
+                        <tr>
+                            <td>Brasileirão</td>
+                            <td>Roberto Dinamite <small>(Brasil)</small></td>
+                            <td class="numero gols">190</td>
+                            <td>Vasco</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PERFIS: GRID com repeat(auto-fit, minmax()) -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Qual liga combina com você?</h2>
+                <p class="secao-intro">Cada liga tem um jeito próprio de jogar e de torcer. Veja qual tem mais a ver com o seu gosto.</p>
+                <div class="perfis">
+                    <article class="perfil perfil-brasileirao perfil-destaque">
+                        <img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil">
+                        <div>
+                            <h3>Gosta de imprevisibilidade?</h3>
+                            <p>O Brasileirão já teve 17 campeões diferentes e rebaixa quatro clubes por ano: ninguém está seguro.</p>
+                            <a href="./brasileirao.html">Conhecer o Brasileirão</a>
+                        </div>
+                    </article>
+                    <article class="perfil perfil-premier">
+                        <img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra">
+                        <div>
+                            <h3>Gosta de ritmo intenso?</h3>
+                            <p>A liga que mais fatura no mundo tem elencos fortes em quase todos os clubes e poucos jogos fáceis.</p>
+                            <a href="./premier-league.html">Conhecer a Premier League</a>
+                        </div>
+                    </article>
+                    <article class="perfil perfil-laliga">
+                        <img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha">
+                        <div>
+                            <h3>Gosta de craques e toque de bola?</h3>
+                            <p>Foi o palco de Messi e Cristiano Ronaldo e ainda tem um dos clássicos mais famosos do planeta.</p>
+                            <a href="./la-liga.html">Conhecer La Liga</a>
+                        </div>
+                    </article>
+                    <article class="perfil perfil-seriea">
+                        <img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália">
+                        <div>
+                            <h3>Gosta de tática?</h3>
+                            <p>A escola do catenaccio valoriza a organização defensiva e os técnicos estrategistas.</p>
+                            <a href="./serie-a.html">Conhecer a Serie A</a>
+                        </div>
+                    </article>
+                    <article class="perfil perfil-bundesliga">
+                        <img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha">
+                        <div>
+                            <h3>Gosta de arquibancada lotada?</h3>
+                            <p>Mais de 42 mil torcedores por jogo em 2025/26 e a famosa Muralha Amarela do Dortmund.</p>
+                            <a href="./bundesliga.html">Conhecer a Bundesliga</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <div class="container rodape-colunas">
+            <section class="rodape-sobre">
+                <h2>Ligas em Campo</h2>
+                <p>Guia das cinco grandes ligas do futebol.</p>
+                <p>Dados atualizados até o fim da temporada europeia 2025/26 e do Brasileirão 2025.</p>
+            </section>
+            <nav class="rodape-links" aria-label="Mapa do site">
+                <h2>Navegue</h2>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+            <nav class="rodape-links" aria-label="Ligas">
+                <h2>Ligas</h2>
+                <ul>
+                    <li><a href="./brasileirao.html">Brasileirão</a></li>
+                    <li><a href="./premier-league.html">Premier League</a></li>
+                    <li><a href="./la-liga.html">La Liga</a></li>
+                    <li><a href="./serie-a.html">Serie A</a></li>
+                    <li><a href="./bundesliga.html">Bundesliga</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container rodape-base">
+            <p>&copy; 2026 Ligas em Campo.</p>
+            <a href="#topo">Voltar ao topo</a>
+        </div>
+    </footer>
+</body>
+</html>

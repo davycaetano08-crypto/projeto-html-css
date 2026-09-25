@@ -3,10 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <title>Ligas Mundiais</title>
+    <title>Ligas em Campo | As cinco grandes ligas do futebol</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
 </head>
-<body>
-    
+<body id="topo">
+    <!--
+        LIGAS EM CAMPO - Página inicial
+        Trabalho 1 - Web Básico (HTML5 semântico e CSS3)
+    -->
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="marca">
+                <img src="./assets/img/logo-bola.png" alt="Bola de futebol, símbolo do site">
+                Ligas em Campo
+            </a>
+            <nav class="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./index.html" class="ativo">Início</a></li>
+                    <li>
+                        <a href="./index.html#escalacao">Ligas ▾</a>
+                        <!-- Submenu: aparece ao passar o mouse (CSS :hover) -->
+                        <ul class="submenu">
+                            <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil"> Brasileirão</a></li>
+                            <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra"> Premier League</a></li>
+                            <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha"> La Liga</a></li>
+                            <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália"> Serie A</a></li>
+                            <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha"> Bundesliga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main>
+        <!-- TOPO: imagem fixa de fundo (background-attachment: fixed) -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-conteudo">
+                    <h1>Ligas em Campo</h1>
+                    <p>Brasileirão, Premier League, La Liga, Serie A e Bundesliga lado a lado: como cada liga começou, quem mais venceu, os grandes clássicos e os recordes de cada uma.</p>
+                    <div class="hero-acoes">
+                        <a href="#escalacao" class="botao botao-primario">Ver as cinco ligas</a>
+                        <a href="./comparativo.html" class="botao botao-secundario">Comparar lado a lado</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESCALAÇÃO: GRID com grid-template-areas posiciona as ligas no campo -->
+        <section id="escalacao" class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">As cinco ligas em campo</h2>
+                <p class="secao-intro">Montamos um time em que cada liga ocupa uma posição, com o Brasileirão de capitão no meio do campo. Escolha uma para ver história, campeões, clássicos e curiosidades.</p>
+                <ul class="campo">
+                    <li class="area-brasileirao">
+                        <a href="./brasileirao.html" class="card-liga">
+                            <img src="./assets/img/escudo-brasil.png" alt="Bandeira do Brasil">
+                            <h3>Brasileirão</h3>
+                            <p>Brasil, desde 1959</p>
+                            <p class="card-liga-dados">20 clubes, 38 rodadas</p>
+                        </a>
+                    </li>
+                    <li class="area-premier">
+                        <a href="./premier-league.html" class="card-liga">
+                            <img src="./assets/img/escudo-inglaterra.png" alt="Bandeira da Inglaterra">
+                            <h3>Premier League</h3>
+                            <p>Inglaterra, desde 1992</p>
+                            <p class="card-liga-dados">20 clubes, 38 rodadas</p>
+                        </a>
+                    </li>
+                    <li class="area-laliga">
+                        <a href="./la-liga.html" class="card-liga">
+                            <img src="./assets/img/escudo-espanha.png" alt="Bandeira da Espanha">
+                            <h3>La Liga</h3>
+                            <p>Espanha, desde 1929</p>
+                            <p class="card-liga-dados">20 clubes, 38 rodadas</p>
+                        </a>
+                    </li>
+                    <li class="area-seriea">
+                        <a href="./serie-a.html" class="card-liga">
+                            <img src="./assets/img/escudo-italia.png" alt="Bandeira da Itália">
+                            <h3>Serie A</h3>
+                            <p>Itália, desde 1898</p>
+                            <p class="card-liga-dados">20 clubes, 38 rodadas</p>
+                        </a>
+                    </li>
+                    <li class="area-bundesliga">
+                        <a href="./bundesliga.html" class="card-liga">
+                            <img src="./assets/img/escudo-alemanha.png" alt="Bandeira da Alemanha">
+                            <h3>Bundesliga</h3>
+                            <p>Alemanha, desde 1963</p>
+                            <p class="card-liga-dados">18 clubes, 34 rodadas</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PLACAR: FLEXBOX com os números das cinco ligas -->
+        <section class="secao">
+            <div class="container">
+                <div class="placar">
+                    <h2>O placar das cinco ligas</h2>
+                    <ul class="placar-itens">
+                        <li><strong>98</strong> clubes na primeira divisão</li>
+                        <li><strong>1.826</strong> partidas por temporada, somando as cinco ligas</li>
+                        <li><strong>36</strong> títulos de Real Madrid e Juventus, os maiores campeões</li>
+                        <li><strong>474</strong> gols de Messi em La Liga, recorde entre as cinco</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMPEÕES: GRID com a tabela e a lista de destaques lado a lado -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Quem levantou a taça</h2>
+                <p class="secao-intro">Os campeões do Brasileirão 2025 e da temporada europeia 2025/26.</p>
+                <div class="campeoes-layout">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Liga</th>
+                                <th>Campeão</th>
+                                <th>Vice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="./brasileirao.html" class="celula-liga"><img src="./assets/img/bandeira-brasil.png" alt="Bandeira do Brasil"> <span>Brasileirão<br><small>Temporada 2025</small></span></a></td>
+                                <td><strong>Flamengo</strong></td>
+                                <td>Palmeiras</td>
+                            </tr>
+                            <tr>
+                                <td><a href="./premier-league.html" class="celula-liga"><img src="./assets/img/bandeira-inglaterra.png" alt="Bandeira da Inglaterra"> <span>Premier League<br><small>Temporada 2025/26</small></span></a></td>
+                                <td><strong>Arsenal</strong></td>
+                                <td>Manchester City</td>
+                            </tr>
+                            <tr>
+                                <td><a href="./la-liga.html" class="celula-liga"><img src="./assets/img/bandeira-espanha.png" alt="Bandeira da Espanha"> <span>La Liga<br><small>Temporada 2025/26</small></span></a></td>
+                                <td><strong>Barcelona</strong></td>
+                                <td>Real Madrid</td>
+                            </tr>
+                            <tr>
+                                <td><a href="./serie-a.html" class="celula-liga"><img src="./assets/img/bandeira-italia.png" alt="Bandeira da Itália"> <span>Serie A<br><small>Temporada 2025/26</small></span></a></td>
+                                <td><strong>Inter de Milão</strong></td>
+                                <td>Napoli</td>
+                            </tr>
+                            <tr>
+                                <td><a href="./bundesliga.html" class="celula-liga"><img src="./assets/img/bandeira-alemanha.png" alt="Bandeira da Alemanha"> <span>Bundesliga<br><small>Temporada 2025/26</small></span></a></td>
+                                <td><strong>Bayern de Munique</strong></td>
+                                <td>Borussia Dortmund</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">O Brasileirão é disputado dentro de um mesmo ano; as ligas europeias vão de agosto a maio.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <aside class="destaques">
+                        <h3>Destaques da temporada</h3>
+                        <ul class="lista-bola">
+                            <li>O Arsenal voltou a ser campeão inglês depois de 22 anos.</li>
+                            <li>O Barcelona confirmou o título vencendo o Real Madrid por 2 a 0, no clássico.</li>
+                            <li>A Inter conquistou o 21º título italiano com três rodadas de antecedência.</li>
+                            <li>Harry Kane fez 36 gols e o Bayern chegou ao 35º título alemão.</li>
+                            <li>O Flamengo venceu o Brasileirão e a Libertadores no mesmo ano.</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- CITAÇÃO: blockquote com a fonte no atributo cite -->
+        <section class="secao">
+            <div class="container">
+                <blockquote class="citacao" cite="https://pt.wikipedia.org/wiki/Bill_Shankly">
+                    <p><q>Algumas pessoas acham que o futebol é uma questão de vida ou morte. Fico muito decepcionado com essa atitude. Posso garantir que é muito, muito mais importante do que isso.</q></p>
+                    <footer>Bill Shankly, técnico do Liverpool de 1959 a 1974</footer>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <div class="container rodape-colunas">
+            <section class="rodape-sobre">
+                <h2>Ligas em Campo</h2>
+                <p>Guia das cinco grandes ligas do futebol.</p>
+                <p>Dados atualizados até o fim da temporada europeia 2025/26 e do Brasileirão 2025.</p>
+            </section>
+            <nav class="rodape-links" aria-label="Mapa do site">
+                <h2>Navegue</h2>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+            <nav class="rodape-links" aria-label="Ligas">
+                <h2>Ligas</h2>
+                <ul>
+                    <li><a href="./brasileirao.html">Brasileirão</a></li>
+                    <li><a href="./premier-league.html">Premier League</a></li>
+                    <li><a href="./la-liga.html">La Liga</a></li>
+                    <li><a href="./serie-a.html">Serie A</a></li>
+                    <li><a href="./bundesliga.html">Bundesliga</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container rodape-base">
+            <p>&copy; 2026 Ligas em Campo.</p>
+            <a href="#topo">Voltar ao topo</a>
+        </div>
+    </footer>
 </body>
 </html>
