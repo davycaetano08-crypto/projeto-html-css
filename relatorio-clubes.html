@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de clubes | Ligas em Campo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/gestao.css">
+    <link rel="icon" href="./assets/img/icone-bola.png">
+    <script src="./assets/js/gestao.js" defer></script>
+</head>
+<body id="topo">
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="marca"><img src="./assets/img/logo-bola.png" alt="Bola de futebol, símbolo do site">Ligas em Campo</a>
+            <nav class="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li>
+                        <a href="./index.html#escalacao">Ligas ▾</a>
+                        <ul class="submenu">
+                            <li><a href="./brasileirao.html"><img src="./assets/img/escudo-brasil.png" alt=""> Brasileirão</a></li>
+                            <li><a href="./premier-league.html"><img src="./assets/img/escudo-inglaterra.png" alt=""> Premier League</a></li>
+                            <li><a href="./la-liga.html"><img src="./assets/img/escudo-espanha.png" alt=""> La Liga</a></li>
+                            <li><a href="./serie-a.html"><img src="./assets/img/escudo-italia.png" alt=""> Serie A</a></li>
+                            <li><a href="./bundesliga.html"><img src="./assets/img/escudo-alemanha.png" alt=""> Bundesliga</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./comparativo.html">Comparativo</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="banner-pagina">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está aqui"><ol><li><a href="./index.html">Início</a> ›</li><li><a href="./admin.html">Administração</a> ›</li><li>Relatório de clubes</li></ol></nav>
+                <h1>Relatório de clubes</h1>
+                <p>Dados carregados diretamente dos registros deste navegador.</p>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <div class="ferramentas-relatorio">
+                    <h2 class="secao-titulo">Clubes cadastrados</h2>
+                    <button class="botao-gestao botao-secundario-gestao" type="button" data-sair>Sair da sessão</button>
+                </div>
+                <nav aria-label="Navegação dos relatórios">
+                    <ul class="links-relatorios">
+                        <li><a href="./admin.html">Voltar aos cadastros</a></li>
+                        <li><a href="./relatorio-clubes.html" aria-current="page">Relatório de clubes</a></li>
+                        <li><a href="./relatorio-jogadores.html">Relatório de jogadores</a></li>
+                        <li><a href="./relatorio-partidas.html">Relatório de partidas</a></li>
+                    </ul>
+                </nav>
+                <p id="estado-relatorio" class="mensagem-gestao" role="status" aria-live="polite">Carregando relatório...</p>
+                <div class="tabela-responsiva">
+                    <table>
+                        <caption>Relatório dinâmico de clubes</caption>
+                        <thead><tr><th>Clube</th><th>País</th><th>Liga</th></tr></thead>
+                        <tbody data-relatorio="clubes"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape"><div class="container rodape-base"><p>&copy; 2026 Ligas em Campo.</p><a href="./admin.html">Voltar à administração</a></div></footer>
+</body>
+</html>
